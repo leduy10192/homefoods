@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Braintree
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -47,6 +48,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        URLContexts.forEach { context in
+            if context.url.scheme?.localizedCaseInsensitiveCompare("com.leduy10192.HomeFoods.payments") == .orderedSame {
+                BTAppContextSwitcher.handleOpenURLContext(context)
+            }
+        }
+    }
 
 }
 

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,6 +43,9 @@
                                 <state key="normal" title="Not a member? Register">
                                     <color key="titleColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="QpC-Aa-8la" kind="show" id="F6s-PZ-Rzq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -53,6 +56,137 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="800.00000000000011" y="69.642857142857139"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="ghm-Xo-HmG">
+            <objects>
+                <viewController id="QpC-Aa-8la" userLabel="Register View Controller" customClass="RegisterViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dTI-Pw-SNJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="seller@2.com" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="bWC-9C-IW8" userLabel="Email Text Field">
+                                <rect key="frame" x="43" y="122" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Password" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="VJX-fO-IM4" userLabel="Password Text Field">
+                                <rect key="frame" x="43" y="175" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="(111)222-333" placeholder="Phone" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="ay8-Kn-HiC" userLabel="Phone Text Field">
+                                <rect key="frame" x="43" y="222" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Indian Home Food" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="TJ5-8R-SfX" userLabel="Name Text Field">
+                                <rect key="frame" x="43" y="275" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="San Jose" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="ysV-vb-hgg" userLabel="City Field">
+                                <rect key="frame" x="35" y="550" width="331" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CA" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="3g3-ih-M7C" userLabel="State Field">
+                                <rect key="frame" x="35" y="620" width="331" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="95111" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="XNo-Sb-JKk" userLabel="Zip Field">
+                                <rect key="frame" x="35" y="691" width="331" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123 Steven Ct" placeholder="Street" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="25v-1u-8Lc" userLabel="Street Field">
+                                <rect key="frame" x="35" y="481" width="331" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-mail" translatesAutoresizingMaskIntoConstraints="NO" id="5II-TP-Md9">
+                                <rect key="frame" x="54" y="130" width="22" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="old-telephone-ringing" translatesAutoresizingMaskIntoConstraints="NO" id="KCw-aB-Av1">
+                                <rect key="frame" x="54" y="230" width="22" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-padlock" translatesAutoresizingMaskIntoConstraints="NO" id="CrL-Ak-UZH">
+                                <rect key="frame" x="53" y="178" width="22" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you a?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dds-Od-9di">
+                                <rect key="frame" x="43" y="327" width="105" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w9y-T4-Ua9" userLabel="Segment Control">
+                                <rect key="frame" x="43" y="374" width="323" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Seller"/>
+                                    <segment title="Buyer"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentPicked:" destination="QpC-Aa-8la" eventType="valueChanged" id="w6b-ND-gss"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyK-aj-16b" userLabel="Address Label">
+                                <rect key="frame" x="43" y="428" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Osm-Hn-IIu">
+                                <rect key="frame" x="30" y="778" width="354" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="SIGN UP" backgroundImage="sellerLogin">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="j4l-1c-6BL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dkr-cD-5iG"/>
+                        <color key="backgroundColor" red="0.8217668608750045" green="0.84156636062032841" blue="0.92459044417714686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Osm-Hn-IIu" firstAttribute="top" secondItem="dkr-cD-5iG" secondAttribute="top" constant="690" id="eLU-ex-SnF"/>
+                            <constraint firstItem="Osm-Hn-IIu" firstAttribute="centerX" secondItem="dTI-Pw-SNJ" secondAttribute="centerX" id="mej-Sh-W7I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Geq-hY-LJE"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="xyK-aj-16b" id="Iem-Mz-pKF"/>
+                        <outlet property="cityField" destination="ysV-vb-hgg" id="WSf-hL-VV1"/>
+                        <outlet property="emailTextField" destination="bWC-9C-IW8" id="fZM-eD-WlQ"/>
+                        <outlet property="nameTextField" destination="TJ5-8R-SfX" id="mcR-u3-Vcd"/>
+                        <outlet property="passwordTextField" destination="VJX-fO-IM4" id="37T-cL-ojF"/>
+                        <outlet property="phoneTextField" destination="ay8-Kn-HiC" id="wJt-oK-BNJ"/>
+                        <outlet property="segmentControl" destination="w9y-T4-Ua9" id="96X-VH-qF4"/>
+                        <outlet property="signUpButton" destination="Osm-Hn-IIu" id="nCn-cE-v37"/>
+                        <outlet property="signUpTop" destination="eLU-ex-SnF" id="4YD-4W-MM5"/>
+                        <outlet property="stateField" destination="3g3-ih-M7C" id="mvp-ei-xYl"/>
+                        <outlet property="streetField" destination="25v-1u-8Lc" id="vgU-qz-F0e"/>
+                        <outlet property="zipField" destination="XNo-Sb-JKk" id="o5C-c8-Ndk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8X7-2H-GtX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900.0000000000002" y="-194.19642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sbA-fZ-2Xe">
@@ -74,8 +208,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-mail" width="21" height="16"/>
+        <image name="icon-padlock" width="21" height="24"/>
         <image name="logo" width="1200" height="1200"/>
+        <image name="old-telephone-ringing" width="512" height="512"/>
         <image name="sellerLogin" width="354" height="60"/>
+        <image name="textField" width="354" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
