@@ -16,9 +16,11 @@
 		0C07BA98263BE02F00989732 /* HomeFoodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C07BA97263BE02F00989732 /* HomeFoodsTests.swift */; };
 		0C07BAA3263BE02F00989732 /* HomeFoodsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C07BAA2263BE02F00989732 /* HomeFoodsUITests.swift */; };
 		0C07BAB4263BEEFC00989732 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C07BAB3263BEEFC00989732 /* WelcomeViewController.swift */; };
-		0C07BAB6263BEF0B00989732 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C07BAB5263BEF0B00989732 /* RegisterViewController.swift */; };
+		0C07BAB6263BEF0B00989732 /* RestaurantRegisterForm1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C07BAB5263BEF0B00989732 /* RestaurantRegisterForm1ViewController.swift */; };
 		0C07BAB8263BFCE900989732 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C07BAB7263BFCE900989732 /* GoogleService-Info.plist */; };
 		0C07BABA263C063400989732 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C07BAB9263C063400989732 /* Constant.swift */; };
+		0C07BABC263C91BA00989732 /* MemberRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C07BABB263C91BA00989732 /* MemberRegisterViewController.swift */; };
+		0C07BABE263CA23600989732 /* RestarantRegisterForm2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C07BABD263CA23600989732 /* RestarantRegisterForm2ViewController.swift */; };
 		5B35B9A6DAD019166715FEE1 /* Pods_HomeFoods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D6E025567FC958886D9FB /* Pods_HomeFoods.framework */; };
 		8FBD90BAB54862BA7E0C0391 /* Pods_HomeFoods_HomeFoodsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A330281D190B699E147AD10 /* Pods_HomeFoods_HomeFoodsUITests.framework */; };
 		947D5C5F33DECAC92FC3BE47 /* Pods_HomeFoodsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6C600EF525E64FAABFA47E /* Pods_HomeFoodsTests.framework */; };
@@ -57,9 +59,11 @@
 		0C07BAA2263BE02F00989732 /* HomeFoodsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFoodsUITests.swift; sourceTree = "<group>"; };
 		0C07BAA4263BE02F00989732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C07BAB3263BEEFC00989732 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		0C07BAB5263BEF0B00989732 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0C07BAB5263BEF0B00989732 /* RestaurantRegisterForm1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRegisterForm1ViewController.swift; sourceTree = "<group>"; };
 		0C07BAB7263BFCE900989732 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0C07BAB9263C063400989732 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0C07BABB263C91BA00989732 /* MemberRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRegisterViewController.swift; sourceTree = "<group>"; };
+		0C07BABD263CA23600989732 /* RestarantRegisterForm2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestarantRegisterForm2ViewController.swift; sourceTree = "<group>"; };
 		16F24DD6F91B178C7BBAEEC4 /* Pods-HomeFoodsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeFoodsTests.debug.xcconfig"; path = "Target Support Files/Pods-HomeFoodsTests/Pods-HomeFoodsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		176A5C8DEC163CA68C3F0C7F /* Pods-HomeFoods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeFoods.debug.xcconfig"; path = "Target Support Files/Pods-HomeFoods/Pods-HomeFoods.debug.xcconfig"; sourceTree = "<group>"; };
 		1F6C600EF525E64FAABFA47E /* Pods_HomeFoodsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeFoodsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,7 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				0C07BAB3263BEEFC00989732 /* WelcomeViewController.swift */,
-				0C07BAB5263BEF0B00989732 /* RegisterViewController.swift */,
+				0C07BAB5263BEF0B00989732 /* RestaurantRegisterForm1ViewController.swift */,
+				0C07BABB263C91BA00989732 /* MemberRegisterViewController.swift */,
+				0C07BABD263CA23600989732 /* RestarantRegisterForm2ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -444,8 +450,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C07BA85263BE02E00989732 /* ViewController.swift in Sources */,
-				0C07BAB6263BEF0B00989732 /* RegisterViewController.swift in Sources */,
+				0C07BAB6263BEF0B00989732 /* RestaurantRegisterForm1ViewController.swift in Sources */,
 				0C07BAB4263BEEFC00989732 /* WelcomeViewController.swift in Sources */,
+				0C07BABE263CA23600989732 /* RestarantRegisterForm2ViewController.swift in Sources */,
+				0C07BABC263C91BA00989732 /* MemberRegisterViewController.swift in Sources */,
 				0C07BA81263BE02E00989732 /* AppDelegate.swift in Sources */,
 				0C07BA83263BE02E00989732 /* SceneDelegate.swift in Sources */,
 				0C07BABA263C063400989732 /* Constant.swift in Sources */,
