@@ -327,6 +327,7 @@ PODS:
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
   - PromisesObjC (1.2.12)
+  - RSSelectionMenu (7.1.2)
   - TinyConstraints (4.0.1)
 
 DEPENDENCIES:
@@ -338,6 +339,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Kingfisher
   - PopupDialog
+  - RSSelectionMenu
   - TinyConstraints
 
 SPEC REPOS:
@@ -365,6 +367,7 @@ SPEC REPOS:
     - nanopb
     - PopupDialog
     - PromisesObjC
+    - RSSelectionMenu
     - TinyConstraints
 
 SPEC CHECKSUMS:
@@ -391,8 +394,9 @@ SPEC CHECKSUMS:
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  RSSelectionMenu: f803d0936e074b2fdac2c41bf1d0a5b0c7fdc3e1
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: c4494cc3078772d5dde26154ffc4884424bbb068
+PODFILE CHECKSUM: 355679a4e4372483f35fae010017455c659f2cb6
 
 COCOAPODS: 1.10.0.beta.2

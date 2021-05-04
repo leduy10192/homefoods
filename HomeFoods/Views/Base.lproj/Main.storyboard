@@ -300,7 +300,7 @@
                             <barButtonItem id="S2f-2s-htr"/>
                             <barButtonItem title="Next" id="aHd-WM-e1L">
                                 <connections>
-                                    <segue destination="MNh-Ra-iKu" kind="show" id="HfP-uZ-Fko"/>
+                                    <segue destination="MNh-Ra-iKu" kind="show" identifier="Res1ToRes2" id="HfP-uZ-Fko"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -330,18 +330,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Osm-Hn-IIu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Osm-Hn-IIu">
                                 <rect key="frame" x="30" y="772" width="354" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="SIGN UP" backgroundImage="sellerLogin">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="onSubmit:" destination="MNh-Ra-iKu" eventType="touchUpInside" id="jgl-Au-QHk"/>
                                     <action selector="registerPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="j4l-1c-6BL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ng-0q-zyq" userLabel="Address Label">
                                 <rect key="frame" x="30" y="105" width="106" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQQ-en-Y7Z" userLabel="Address Label">
+                                <rect key="frame" x="30" y="574" width="127" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -355,26 +363,55 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kitchen Days " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Za-ZJ-hId" userLabel="Address Label">
-                                <rect key="frame" x="30" y="344" width="125" height="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqq-M9-unr">
+                                <rect key="frame" x="30" y="347" width="341" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="backgroundColor" red="0.91660853350000004" green="0.89969051020000002" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title=" Select Kitchen Days ">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectDaysButtonClicked:" destination="MNh-Ra-iKu" eventType="touchUpInside" id="neO-Fq-vty"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vH7-1A-pI8">
+                                <rect key="frame" x="32" y="407" width="339" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Rli-IQ-li1">
+                                <rect key="frame" x="196" y="510" width="172" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MeY-bZ-de8" appends="YES" id="bdb-kr-oA7"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eDt-XX-hUp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eDt-XX-hUp" firstAttribute="bottom" secondItem="Osm-Hn-IIu" secondAttribute="bottom" constant="30" id="96K-sP-EHf"/>
                             <constraint firstItem="Osm-Hn-IIu" firstAttribute="centerX" secondItem="0j8-dG-agI" secondAttribute="centerX" id="iKx-DJ-Q7O"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s7J-2d-KqM"/>
                     <connections>
+                        <outlet property="multiSelectPopoverLabel" destination="vH7-1A-pI8" id="5RE-ng-1i3"/>
+                        <outlet property="resImageView" destination="Rli-IQ-li1" id="MB8-Jc-YqM"/>
+                        <outlet property="selectDaysButton" destination="Pqq-M9-unr" id="Rj8-2q-WVs"/>
                         <outlet property="textView" destination="xuE-rU-wwB" id="EDa-9L-haq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ytt-sY-aTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MeY-bZ-de8">
+                    <connections>
+                        <action selector="onCameraButton:" destination="MNh-Ra-iKu" id="ZzW-TK-ML4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3560.8695652173915" y="-208.25892857142856"/>
         </scene>
@@ -400,6 +437,7 @@
     <resources>
         <image name="icon-mail" width="21" height="16"/>
         <image name="icon-padlock" width="21" height="24"/>
+        <image name="image_placeholder" width="375" height="375"/>
         <image name="logo" width="1200" height="1200"/>
         <image name="old-telephone-ringing" width="512" height="512"/>
         <image name="sellerLogin" width="354" height="60"/>

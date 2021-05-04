@@ -15,6 +15,7 @@ target 'HomeFoods' do
   pod 'PopupDialog'
   pod 'IQKeyboardManagerSwift'
   pod 'Braintree'
+  pod 'RSSelectionMenu'
   target 'HomeFoodsTests' do
     inherit! :search_paths
     # Pods for testing

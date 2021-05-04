@@ -26,6 +26,7 @@ class RestaurantRegisterForm1ViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     let db = Firestore.firestore()
+    var resInfo : ResInfo? = nil
     
     var userType: String = K.FStore.restaurant
     override func viewDidLoad() {
@@ -98,6 +99,7 @@ class RestaurantRegisterForm1ViewController: UIViewController {
                         K.FStore.city : city,
                         K.FStore.state: state,
                         K.FStore.zip: zip
+                        
                     
                     ])
                     
@@ -116,15 +118,32 @@ class RestaurantRegisterForm1ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "Res1ToRes2" {
+        // remember to down cast it to the destination type (because default func doesn't know the new class type created)
+        // cast! forced down cast
+        if let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let phoneNum = phoneTextField.text,
+            let name = nameTextField.text,
+            let street = streetField.text,
+            let city = cityField.text,
+            let state = stateField.text,
+            let zip = zipField.text
+
+            {
+            self.resInfo = ResInfo(name: name, email: email, password: password, phoneNumber: phoneNum, street: street, state: state, city: city, zip: zip, imageURLString: "", description: "", kitchenDays: "")
+        }
+        let destinationVC = segue.destination as! RestarantRegisterForm2ViewController
+            destinationVC.resInfo = self.resInfo
+        
     }
-    */
+    }
+
 
 }
 

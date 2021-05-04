@@ -23,6 +23,9 @@ struct K {
         static let memberName = "memberName"
         static let memberPhoneNum = "memberPhoneNum"
         static let memberEmail = "memberEmail"
+        static let tags = "tags"
+        static let description = "description"
+        static let kitchenDays = "kitchenDays"
         
         static let orders = "orders"
         static let itemName = "name"
