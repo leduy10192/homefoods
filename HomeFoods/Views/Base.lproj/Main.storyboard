@@ -27,6 +27,9 @@
                                 <state key="normal" title="SELLER LOGIN" backgroundImage="sellerLogin">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Zmh-ss-EAE" kind="show" id="cKd-Os-klz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPH-k3-nrN">
                                 <rect key="frame" x="68" y="666" width="278" height="52"/>
@@ -35,6 +38,9 @@
                                 <state key="normal" title="BUYER LOGIN" backgroundImage="sellerLogin">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="f8U-wb-HXi" kind="show" id="tVJ-QK-6Rd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwX-ck-BCs">
                                 <rect key="frame" x="111" y="749" width="187" height="32"/>
@@ -56,6 +62,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="800.00000000000011" y="69.642857142857139"/>
+        </scene>
+        <!--Restaurant Login View Controller-->
+        <scene sceneID="Ohf-Fs-v8b">
+            <objects>
+                <viewController id="Zmh-ss-EAE" customClass="RestaurantLoginViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YiI-Hd-sp4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seller Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIK-AT-wLa">
+                                <rect key="frame" x="142" y="148" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="seller@2.com" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="jud-BS-MLT" userLabel="Email Text Field">
+                                <rect key="frame" x="43" y="248" width="329" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailTextField:" destination="a9h-qP-QDo" eventType="editingDidEnd" id="wE5-S5-bpd"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="0VV-tF-G65" userLabel="Email Text Field">
+                                <rect key="frame" x="43" y="341" width="329" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-mail" translatesAutoresizingMaskIntoConstraints="NO" id="wRo-fI-aLY">
+                                <rect key="frame" x="53" y="265" width="29" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-padlock" translatesAutoresizingMaskIntoConstraints="NO" id="Mgv-E0-aY8">
+                                <rect key="frame" x="53" y="358" width="29" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wD-nv-TSV">
+                                <rect key="frame" x="30" y="448" width="354" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="LOGIN" backgroundImage="sellerLogin">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="Zmh-ss-EAE" eventType="touchUpInside" id="xCS-jg-zNr"/>
+                                    <action selector="onSubmit:" destination="MNh-Ra-iKu" eventType="touchUpInside" id="e52-Jr-GVh"/>
+                                    <action selector="registerPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="KIk-nd-HPs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cza-Lu-eUC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kgf-La-VP9"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="jud-BS-MLT" id="mzP-qc-5MZ"/>
+                        <outlet property="passwordTextField" destination="0VV-tF-G65" id="Psq-fE-VFj"/>
+                        <segue destination="FXo-N7-CKy" kind="show" identifier="restaurantToHome" id="3iO-oS-Ld6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wsk-xu-Wh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="a9h-qP-QDo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="222" y="958"/>
+        </scene>
+        <!--Restaurant Home View Controller-->
+        <scene sceneID="Zhu-XY-1Uh">
+            <objects>
+                <viewController id="FXo-N7-CKy" userLabel="Restaurant Home View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jP9-JB-Xqf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pc-bH-VzQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6nz-XU-cfs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Item List" id="J6U-6x-GkT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61t-Cn-iDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="222" y="1679"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dbc-Vv-G5w">
@@ -88,7 +186,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QpC-Aa-8la" kind="show" id="jlL-U3-Q6C"/>
+                                    <segue destination="QpC-Aa-8la" kind="show" id="uUm-QX-oRL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nD-c9-3pg">
@@ -101,6 +199,9 @@
                                 <state key="normal" title="BUYER" backgroundImage="sellerLogin">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4ej-o2-anK" kind="show" id="2Pw-1x-ARc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GjU-dr-f1t"/>
@@ -213,6 +314,9 @@
                                 <state key="normal" title="Vegetarian" backgroundImage="sellerLogin">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="vegetarianPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="2ap-2C-glW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpX-x4-iKn">
                                 <rect key="frame" x="156" y="660" width="119" height="36"/>
@@ -220,6 +324,9 @@
                                 <state key="normal" title="Gluten Free" backgroundImage="sellerLogin">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="glutenPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="aB0-w5-bac"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctQ-xV-7ax">
                                 <rect key="frame" x="42" y="706" width="119" height="36"/>
@@ -227,6 +334,9 @@
                                 <state key="normal" title="Kosher Food" backgroundImage="sellerLogin">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="kosherPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="zwx-M0-8mU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXC-l8-Qch">
                                 <rect key="frame" x="43" y="752" width="100" height="36"/>
@@ -234,6 +344,9 @@
                                 <state key="normal" title="Dairy Free" backgroundImage="sellerLogin">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="diaryPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="niE-yM-Ugv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhy-gV-kc6">
                                 <rect key="frame" x="156" y="752" width="119" height="36"/>
@@ -241,6 +354,9 @@
                                 <state key="normal" title="Indian Cuisine" backgroundImage="sellerLogin">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="indianPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="TwT-no-0yh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMv-Kl-gEC">
                                 <rect key="frame" x="286" y="752" width="87" height="36"/>
@@ -248,6 +364,9 @@
                                 <state key="normal" title="Salads" backgroundImage="sellerLogin">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="saladPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="S3R-OM-joC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woV-j0-trP">
                                 <rect key="frame" x="171" y="704" width="104" height="36"/>
@@ -255,6 +374,9 @@
                                 <state key="normal" title="Desserts" backgroundImage="sellerLogin">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="dessertPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="6gQ-LD-AoT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOr-1P-2qT">
                                 <rect key="frame" x="283" y="704" width="90" height="36"/>
@@ -262,6 +384,9 @@
                                 <state key="normal" title="Lunch" backgroundImage="sellerLogin">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="lunchPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="kR5-NW-K2F"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oI-YQ-cUe">
                                 <rect key="frame" x="283" y="660" width="90" height="36"/>
@@ -269,13 +394,9 @@
                                 <state key="normal" title="Kito Diet" backgroundImage="sellerLogin">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOn-rB-o58">
-                                <rect key="frame" x="42" y="797" width="100" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sugar Free" backgroundImage="sellerLogin">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
+                                <connections>
+                                    <action selector="kitoPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="5Ex-ok-PoQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hana's Indian Home Kitchen" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="TJ5-8R-SfX" userLabel="Name Text Field">
                                 <rect key="frame" x="43" y="309" width="329" height="38"/>
@@ -308,13 +429,22 @@
                     <connections>
                         <outlet property="addressLabel" destination="xyK-aj-16b" id="Iem-Mz-pKF"/>
                         <outlet property="cityField" destination="ysV-vb-hgg" id="WSf-hL-VV1"/>
+                        <outlet property="dairyTag" destination="KXC-l8-Qch" id="Q6M-6G-8ue"/>
+                        <outlet property="dessertsTag" destination="woV-j0-trP" id="lmf-qO-Vzr"/>
                         <outlet property="emailTextField" destination="bWC-9C-IW8" id="fZM-eD-WlQ"/>
+                        <outlet property="glutenFreeTag" destination="OpX-x4-iKn" id="XzE-z3-JtD"/>
+                        <outlet property="indianTag" destination="fhy-gV-kc6" id="mO9-Hp-kSY"/>
+                        <outlet property="kitoTag" destination="3oI-YQ-cUe" id="NHV-bA-Rup"/>
+                        <outlet property="kosherTag" destination="ctQ-xV-7ax" id="aiX-x6-NR7"/>
+                        <outlet property="lunchTag" destination="iOr-1P-2qT" id="fVf-et-OXs"/>
                         <outlet property="nameTextField" destination="TJ5-8R-SfX" id="mcR-u3-Vcd"/>
                         <outlet property="passwordTextField" destination="VJX-fO-IM4" id="37T-cL-ojF"/>
                         <outlet property="phoneTextField" destination="ay8-Kn-HiC" id="wJt-oK-BNJ"/>
+                        <outlet property="saladTag" destination="xMv-Kl-gEC" id="p7R-me-1X6"/>
                         <outlet property="signUpButton" destination="Osm-Hn-IIu" id="nCn-cE-v37"/>
                         <outlet property="stateField" destination="3g3-ih-M7C" id="mvp-ei-xYl"/>
                         <outlet property="streetField" destination="25v-1u-8Lc" id="vgU-qz-F0e"/>
+                        <outlet property="vegetarianTag" destination="0mK-9u-KXJ" id="Jmf-sO-0LZ"/>
                         <outlet property="zipField" destination="XNo-Sb-JKk" id="o5C-c8-Ndk"/>
                     </connections>
                 </viewController>
@@ -432,6 +562,196 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfa-ht-9Qg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-110.14492753623189" y="69.642857142857139"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="zB8-DV-TOA">
+            <objects>
+                <viewController id="4ej-o2-anK" userLabel="Register View Controller" customClass="MemberRegisterViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ffp-jr-CER">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="buyer@2.com" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="IS6-u5-yWC" userLabel="Email Text Field">
+                                <rect key="frame" x="43" y="122" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Password" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="8KZ-B9-cdj" userLabel="Password Text Field">
+                                <rect key="frame" x="43" y="175" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="(111)222-333" placeholder="Phone" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="31D-Zz-EUn" userLabel="Phone Text Field">
+                                <rect key="frame" x="43" y="222" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="San Jose" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="nzO-B0-Bpm" userLabel="City Field">
+                                <rect key="frame" x="42" y="448" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CA" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="fTZ-9S-y0j" userLabel="State Field">
+                                <rect key="frame" x="42" y="502" width="331" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="95111" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="hf6-R1-umv" userLabel="Zip Field">
+                                <rect key="frame" x="42" y="554" width="331" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123 Sweet Ct" placeholder="Street" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-1T-Dx4" userLabel="Street Field">
+                                <rect key="frame" x="42" y="394" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-mail" translatesAutoresizingMaskIntoConstraints="NO" id="mgU-89-Mfs">
+                                <rect key="frame" x="54" y="130" width="22" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="old-telephone-ringing" translatesAutoresizingMaskIntoConstraints="NO" id="Ckn-wI-oZe">
+                                <rect key="frame" x="54" y="230" width="22" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-padlock" translatesAutoresizingMaskIntoConstraints="NO" id="tam-Fo-tFf">
+                                <rect key="frame" x="53" y="178" width="22" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ad5-Xq-dHH" userLabel="Address Label">
+                                <rect key="frame" x="44" y="360" width="76" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Duy Le" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="7ea-WH-Kic" userLabel="Name Text Field">
+                                <rect key="frame" x="43" y="309" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfA-QU-n1s" userLabel="Address Label">
+                                <rect key="frame" x="42" y="277" width="54" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwa-Fe-eoa">
+                                <rect key="frame" x="29" y="736" width="354" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="SIGN UP" backgroundImage="sellerLogin">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSubmit:" destination="MNh-Ra-iKu" eventType="touchUpInside" id="xzY-1H-BnJ"/>
+                                    <action selector="registerPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="4aP-8T-kGK"/>
+                                    <action selector="registerPressed:" destination="4ej-o2-anK" eventType="touchUpInside" id="bVi-Rw-0rw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jeg-cb-N42"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Buyer Information" id="mZH-kk-WQn">
+                        <barButtonItem key="rightBarButtonItem" id="YWf-LP-gCV"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityField" destination="nzO-B0-Bpm" id="L0u-oA-XL0"/>
+                        <outlet property="emailTextField" destination="IS6-u5-yWC" id="dSc-VC-aE6"/>
+                        <outlet property="nameTextField" destination="7ea-WH-Kic" id="OI6-m4-BhO"/>
+                        <outlet property="passwordTextField" destination="8KZ-B9-cdj" id="PHB-bs-DSW"/>
+                        <outlet property="phoneTextField" destination="31D-Zz-EUn" id="3pi-qo-Gmx"/>
+                        <outlet property="signUpButton" destination="Osm-Hn-IIu" id="bf3-SY-1xf"/>
+                        <outlet property="stateField" destination="fTZ-9S-y0j" id="TjI-nE-8AT"/>
+                        <outlet property="streetField" destination="Abo-1T-Dx4" id="OxH-gE-8pi"/>
+                        <outlet property="zipField" destination="hf6-R1-umv" id="dJ5-y8-SrX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ghe-Zz-qZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2625" y="488"/>
+        </scene>
+        <!--Member Login View Controller-->
+        <scene sceneID="GIk-zx-bvx">
+            <objects>
+                <viewController id="f8U-wb-HXi" customClass="MemberLoginViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Dd-Pj-9or">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buyer Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTF-1f-okf">
+                                <rect key="frame" x="142" y="148" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="buyer@2.com" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-tN-Q1g" userLabel="Email Text Field">
+                                <rect key="frame" x="43" y="248" width="329" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="VUg-nb-WNg" userLabel="Email Text Field">
+                                <rect key="frame" x="43" y="341" width="329" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-mail" translatesAutoresizingMaskIntoConstraints="NO" id="diB-M0-QvH">
+                                <rect key="frame" x="53" y="265" width="29" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-padlock" translatesAutoresizingMaskIntoConstraints="NO" id="ayc-68-yWb">
+                                <rect key="frame" x="53" y="358" width="29" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-Qf-aX8">
+                                <rect key="frame" x="30" y="448" width="354" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="LOGIN" backgroundImage="sellerLogin">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="f8U-wb-HXi" eventType="touchUpInside" id="vmH-oh-Rj8"/>
+                                    <action selector="onSubmit:" destination="MNh-Ra-iKu" eventType="touchUpInside" id="c6e-zI-Wl9"/>
+                                    <action selector="registerPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="Oef-pA-DDi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K4U-Ia-ZPo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ygd-DZ-qZZ"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="rqo-tN-Q1g" id="oyc-Xu-K4g"/>
+                        <outlet property="passwordTextField" destination="VUg-nb-WNg" id="1Dt-U4-Xrd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XhG-Jg-ixQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1597" y="958"/>
         </scene>
     </scenes>
     <resources>

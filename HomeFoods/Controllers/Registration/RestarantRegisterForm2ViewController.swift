@@ -116,7 +116,7 @@ class RestarantRegisterForm2ViewController: UIViewController,UIImagePickerContro
                 presentAlert(title: "Error", message: "Some fields are missing.")
                 return
         }
-        
+
         guard let resName = resInfo?.name,
             let phoneNumber = resInfo?.phoneNumber,
             let street = resInfo?.street,
@@ -124,7 +124,8 @@ class RestarantRegisterForm2ViewController: UIViewController,UIImagePickerContro
             let state = resInfo?.state,
             let zip = resInfo?.zip,
             let email = resInfo?.email,
-            let password = resInfo?.password
+            let password = resInfo?.password,
+            let tags = resInfo?.tags
         else{
             print("resInfo is nil")
             return
@@ -162,7 +163,8 @@ class RestarantRegisterForm2ViewController: UIViewController,UIImagePickerContro
                             K.FStore.zip: zip,
                             K.FStore.imageUrl: urlString,
                             K.FStore.description: description,
-                            K.FStore.kitchenDays: kitchenDays
+                            K.FStore.kitchenDays: kitchenDays,
+                            K.FStore.tags: tags
                         ])
                         
                         self.db.collection(self.userType).document(email).collection("items")

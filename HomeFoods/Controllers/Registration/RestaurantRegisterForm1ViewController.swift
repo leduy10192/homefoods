@@ -25,7 +25,32 @@ class RestaurantRegisterForm1ViewController: UIViewController {
     @IBOutlet weak var signUpTop: NSLayoutConstraint!
     @IBOutlet weak var signUpButton: UIButton!
     
+    //tags
+    @IBOutlet weak var vegetarianTag: UIButton!
+    @IBOutlet weak var glutenFreeTag: UIButton!
+    @IBOutlet weak var kitoTag: UIButton!
+    @IBOutlet weak var kosherTag: UIButton!
+    @IBOutlet weak var dessertsTag: UIButton!
+    @IBOutlet weak var lunchTag: UIButton!
+    @IBOutlet weak var dairyTag: UIButton!
+    @IBOutlet weak var indianTag: UIButton!
+    @IBOutlet weak var saladTag: UIButton!
+
+    //flag
+    var isVegSet = false
+    var isGlutenSet = false
+    var isKitoSet = false
+    var isKosherSet = false
+    var isDessertSet = false
+    var isLunchSet = false
+    var isDairySet = false
+    var isIndianSet = false
+    var isSaladSet = false
+    
+    
+    //db initialization
     let db = Firestore.firestore()
+    var tags : [String] = []
     var resInfo : ResInfo? = nil
     
     var userType: String = K.FStore.restaurant
@@ -41,6 +66,24 @@ class RestaurantRegisterForm1ViewController: UIViewController {
         zipField.setLeftPaddingPoints(10)
         print(userType)
         // Do any additional setup after loading the view.
+        
+        vegetarianTag.layer.cornerRadius = 10
+        vegetarianTag.layer.borderColor = UIColor.black.cgColor
+        glutenFreeTag.layer.cornerRadius = 10
+        glutenFreeTag.layer.borderColor = UIColor.black.cgColor
+        kitoTag.layer.cornerRadius = 10
+        kitoTag.layer.borderColor = UIColor.black.cgColor
+        kosherTag.layer.cornerRadius = 10
+        kosherTag.layer.borderColor = UIColor.black.cgColor
+        dessertsTag.layer.cornerRadius = 10
+        dessertsTag.layer.borderColor = UIColor.black.cgColor
+        lunchTag.layer.cornerRadius = 10
+        lunchTag.layer.borderColor = UIColor.black.cgColor
+        dairyTag.layer.cornerRadius = 10
+        dairyTag.layer.borderColor = UIColor.black.cgColor
+        indianTag.layer.cornerRadius = 10
+        indianTag.layer.borderColor = UIColor.black.cgColor
+        saladTag.layer.cornerRadius = 10
     }
     
     @IBAction func segmentPicked(_ sender: UISegmentedControl) {
@@ -126,6 +169,7 @@ class RestaurantRegisterForm1ViewController: UIViewController {
         if segue.identifier == "Res1ToRes2" {
         // remember to down cast it to the destination type (because default func doesn't know the new class type created)
         // cast! forced down cast
+            let tagsString = tags.joined(separator: ",")
         if let email = emailTextField.text,
             let password = passwordTextField.text,
             let phoneNum = phoneTextField.text,
@@ -134,17 +178,17 @@ class RestaurantRegisterForm1ViewController: UIViewController {
             let city = cityField.text,
             let state = stateField.text,
             let zip = zipField.text
-
             {
-            self.resInfo = ResInfo(name: name, email: email, password: password, phoneNumber: phoneNum, street: street, state: state, city: city, zip: zip, imageURLString: "", description: "", kitchenDays: "")
-        }
+            self.resInfo = ResInfo(name: name, email: email, password: password, phoneNumber: phoneNum, street: street, state: state, city: city, zip: zip, imageURLString: "", description: "", kitchenDays: "", tags: tagsString)
+            }
         let destinationVC = segue.destination as! RestarantRegisterForm2ViewController
             destinationVC.resInfo = self.resInfo
         
-    }
+        }
     }
 
 
+    
 }
 
 extension UITextField {
@@ -158,4 +202,171 @@ extension UITextField {
         self.rightView = paddingView
         self.rightViewMode = .always
     }
+}
+
+extension RestaurantRegisterForm1ViewController {
+    //vegetarian
+    @IBAction func vegetarianPressed(_ sender: UIButton) {
+        isVegSet = !isVegSet
+        let button = sender
+        let tagName = (button.titleLabel?.text)!
+        if(isVegSet){
+            button.layer.borderWidth = 1
+            if(!tags.contains(tagName)){
+                tags.append(tagName)
+            }
+        }else{
+            button.layer.borderWidth = 0
+            if(tags.contains(tagName)){
+                tags = tags.filter(){$0 != tagName}
+            }
+        }
+        print(tags)
+    }
+    
+    @IBAction func glutenPressed(_ sender: UIButton) {
+        isGlutenSet = !isGlutenSet
+        let button = sender
+        let tagName = (button.titleLabel?.text)!
+        if(isVegSet){
+            button.layer.borderWidth = 1
+            if(!tags.contains(tagName)){
+                tags.append(tagName)
+            }
+        }else{
+            button.layer.borderWidth = 0
+            if(tags.contains(tagName)){
+                tags = tags.filter(){$0 != tagName}
+            }
+        }
+        print(tags)
+    }
+    
+    @IBAction func kitoPressed(_ sender: UIButton) {
+        isKitoSet = !isKitoSet
+        let button = sender
+        let tagName = (button.titleLabel?.text)!
+        if(isKitoSet){
+            button.layer.borderWidth = 1
+            if(!tags.contains(tagName)){
+                tags.append(tagName)
+            }
+        }else{
+            button.layer.borderWidth = 0
+            if(tags.contains(tagName)){
+                tags = tags.filter(){$0 != tagName}
+            }
+        }
+        print(tags)
+    }
+    
+    @IBAction func kosherPressed(_ sender: UIButton) {
+        isKosherSet = !isKosherSet
+        let button = sender
+        let tagName = (button.titleLabel?.text)!
+        if(isKosherSet){
+            button.layer.borderWidth = 1
+            if(!tags.contains(tagName)){
+                tags.append(tagName)
+            }
+        }else{
+            button.layer.borderWidth = 0
+            if(tags.contains(tagName)){
+                tags = tags.filter(){$0 != tagName}
+            }
+        }
+        print(tags)
+    }
+    
+    @IBAction func dessertPressed(_ sender: UIButton) {
+        isDessertSet = !isDessertSet
+        let button = sender
+        let tagName = (button.titleLabel?.text)!
+        if(isDessertSet){
+            button.layer.borderWidth = 1
+            if(!tags.contains(tagName)){
+                tags.append(tagName)
+            }
+        }else{
+            button.layer.borderWidth = 0
+            if(tags.contains(tagName)){
+                tags = tags.filter(){$0 != tagName}
+            }
+        }
+        print(tags)
+    }
+    
+    @IBAction func lunchPressed(_ sender: UIButton) {
+        isLunchSet = !isLunchSet
+        let button = sender
+        let tagName = (button.titleLabel?.text)!
+        if(isLunchSet){
+            button.layer.borderWidth = 1
+            if(!tags.contains(tagName)){
+                tags.append(tagName)
+            }
+        }else{
+            button.layer.borderWidth = 0
+            if(tags.contains(tagName)){
+                tags = tags.filter(){$0 != tagName}
+            }
+        }
+        print(tags)
+    }
+    
+    @IBAction func diaryPressed(_ sender: UIButton) {
+        isDairySet = !isDairySet
+        let button = sender
+        let tagName = (button.titleLabel?.text)!
+        if(isDairySet){
+            button.layer.borderWidth = 1
+            if(!tags.contains(tagName)){
+                tags.append(tagName)
+            }
+        }else{
+            button.layer.borderWidth = 0
+            if(tags.contains(tagName)){
+                tags = tags.filter(){$0 != tagName}
+            }
+        }
+        print(tags)
+    }
+    
+    @IBAction func indianPressed(_ sender: UIButton) {
+        isIndianSet = !isIndianSet
+        let button = sender
+        let tagName = (button.titleLabel?.text)!
+        if(isIndianSet){
+            button.layer.borderWidth = 1
+            if(!tags.contains(tagName)){
+                tags.append(tagName)
+            }
+        }else{
+            button.layer.borderWidth = 0
+            if(tags.contains(tagName)){
+                tags = tags.filter(){$0 != tagName}
+            }
+        }
+        print(tags)
+    }
+    
+    @IBAction func saladPressed(_ sender: UIButton) {
+        isSaladSet = !isSaladSet
+        let button = sender
+        let tagName = (button.titleLabel?.text)!
+        if(isSaladSet){
+            button.layer.borderWidth = 1
+            if(!tags.contains(tagName)){
+                tags.append(tagName)
+            }
+        }else{
+            button.layer.borderWidth = 0
+            if(tags.contains(tagName)){
+                tags = tags.filter(){$0 != tagName}
+            }
+        }
+        print(tags)
+    }
+    
+    
 }

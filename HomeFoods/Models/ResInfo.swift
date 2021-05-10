@@ -19,6 +19,7 @@ struct ResInfo {
     let imageURLString : String
     let description : String
     let kitchenDays : String
+    let tags : String
     
     var address : String {
         let addr = "\(street) \(city), \(state) \(zip)"
