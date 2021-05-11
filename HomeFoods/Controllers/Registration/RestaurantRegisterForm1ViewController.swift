@@ -171,7 +171,7 @@ class RestaurantRegisterForm1ViewController: UIViewController {
         // cast! forced down cast
             let tagsString = tags.joined(separator: ",")
         if let email = emailTextField.text,
-            let password = passwordTextField.text,
+//            let password = passwordTextField.text,
             let phoneNum = phoneTextField.text,
             let name = nameTextField.text,
             let street = streetField.text,
@@ -179,10 +179,11 @@ class RestaurantRegisterForm1ViewController: UIViewController {
             let state = stateField.text,
             let zip = zipField.text
             {
-            self.resInfo = ResInfo(name: name, email: email, password: password, phoneNumber: phoneNum, street: street, state: state, city: city, zip: zip, imageURLString: "", description: "", kitchenDays: "", tags: tagsString)
+            self.resInfo = ResInfo(name: name, email: email, phoneNumber: phoneNum, street: street, state: state, city: city, zip: zip, imageURLString: "", description: "", kitchenDays: "", tags: tagsString)
             }
         let destinationVC = segue.destination as! RestarantRegisterForm2ViewController
             destinationVC.resInfo = self.resInfo
+            destinationVC.password = self.passwordTextField.text!
         
         }
     }

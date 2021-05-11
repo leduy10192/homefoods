@@ -21,6 +21,7 @@ class RestarantRegisterForm2ViewController: UIViewController,UIImagePickerContro
     @IBOutlet weak var resImageView: UIImageView!
     
     var resInfo : ResInfo?
+    var password: String = ""
     var imagePicker = UIImagePickerController()
     let db = Firestore.firestore()
     
@@ -116,7 +117,7 @@ class RestarantRegisterForm2ViewController: UIViewController,UIImagePickerContro
                 presentAlert(title: "Error", message: "Some fields are missing.")
                 return
         }
-
+        
         guard let resName = resInfo?.name,
             let phoneNumber = resInfo?.phoneNumber,
             let street = resInfo?.street,
@@ -124,7 +125,6 @@ class RestarantRegisterForm2ViewController: UIViewController,UIImagePickerContro
             let state = resInfo?.state,
             let zip = resInfo?.zip,
             let email = resInfo?.email,
-            let password = resInfo?.password,
             let tags = resInfo?.tags
         else{
             print("resInfo is nil")
@@ -149,7 +149,7 @@ class RestarantRegisterForm2ViewController: UIViewController,UIImagePickerContro
                     return
                 }
                 let urlString = url.absoluteString
-                Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+                Auth.auth().createUser(withEmail: email, password: self.password) { (authResult, error) in
                     if let e = error{
                         self.presentAlert(title: "Invalid Signup", message: "\(e.localizedDescription)")
                     }else{

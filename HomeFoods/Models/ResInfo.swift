@@ -10,7 +10,7 @@ import Foundation
 struct ResInfo {
     let name: String
     let email: String
-    let password: String
+//    let password: String
     let phoneNumber : String
     let street : String
     let state : String

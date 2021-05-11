@@ -21,12 +21,17 @@
 		0C07BABA263C063400989732 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C07BAB9263C063400989732 /* Constant.swift */; };
 		0C07BABC263C91BA00989732 /* MemberRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C07BABB263C91BA00989732 /* MemberRegisterViewController.swift */; };
 		0C07BABE263CA23600989732 /* RestarantRegisterForm2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C07BABD263CA23600989732 /* RestarantRegisterForm2ViewController.swift */; };
+		0C0EB392264AEFEC000144F1 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0EB391264AEFEC000144F1 /* PostCell.swift */; };
+		0C0EB394264AF2B6000144F1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0EB393264AF2B6000144F1 /* Item.swift */; };
+		0C0EB397264AF60E000144F1 /* AddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0EB395264AF60E000144F1 /* AddCell.swift */; };
+		0C0EB398264AF60E000144F1 /* AddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EB396264AF60E000144F1 /* AddCell.xib */; };
 		0C3D66272644B153002E740A /* MemberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D66262644B153002E740A /* MemberLoginViewController.swift */; };
 		0C3D66292644B23C002E740A /* RestaurantLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D66282644B23C002E740A /* RestaurantLoginViewController.swift */; };
 		0C8148452640C5BA00678298 /* MultipleSelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8148442640C5BA00678298 /* MultipleSelectionHandler.swift */; };
 		0C8148472640C91100678298 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8148462640C91100678298 /* Enums.swift */; };
 		0C8148492640CD5300678298 /* ResInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8148482640CD5300678298 /* ResInfo.swift */; };
 		0C81484B2640D9D500678298 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81484A2640D9D500678298 /* RootViewController.swift */; };
+		0C85A8F72649033D00240128 /* RestaurantHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85A8F62649033D00240128 /* RestaurantHomeViewController.swift */; };
 		0C9F78102645F0940057B0B9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F780F2645F0940057B0B9 /* TestViewController.swift */; };
 		5B35B9A6DAD019166715FEE1 /* Pods_HomeFoods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D6E025567FC958886D9FB /* Pods_HomeFoods.framework */; };
 		8FBD90BAB54862BA7E0C0391 /* Pods_HomeFoods_HomeFoodsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A330281D190B699E147AD10 /* Pods_HomeFoods_HomeFoodsUITests.framework */; };
@@ -71,12 +76,17 @@
 		0C07BAB9263C063400989732 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0C07BABB263C91BA00989732 /* MemberRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRegisterViewController.swift; sourceTree = "<group>"; };
 		0C07BABD263CA23600989732 /* RestarantRegisterForm2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestarantRegisterForm2ViewController.swift; sourceTree = "<group>"; };
+		0C0EB391264AEFEC000144F1 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		0C0EB393264AF2B6000144F1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		0C0EB395264AF60E000144F1 /* AddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCell.swift; sourceTree = "<group>"; };
+		0C0EB396264AF60E000144F1 /* AddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCell.xib; sourceTree = "<group>"; };
 		0C3D66262644B153002E740A /* MemberLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLoginViewController.swift; sourceTree = "<group>"; };
 		0C3D66282644B23C002E740A /* RestaurantLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantLoginViewController.swift; sourceTree = "<group>"; };
 		0C8148442640C5BA00678298 /* MultipleSelectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionHandler.swift; sourceTree = "<group>"; };
 		0C8148462640C91100678298 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		0C8148482640CD5300678298 /* ResInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResInfo.swift; sourceTree = "<group>"; };
 		0C81484A2640D9D500678298 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		0C85A8F62649033D00240128 /* RestaurantHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantHomeViewController.swift; sourceTree = "<group>"; };
 		0C9F780F2645F0940057B0B9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		16F24DD6F91B178C7BBAEEC4 /* Pods-HomeFoodsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeFoodsTests.debug.xcconfig"; path = "Target Support Files/Pods-HomeFoodsTests/Pods-HomeFoodsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		176A5C8DEC163CA68C3F0C7F /* Pods-HomeFoods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeFoods.debug.xcconfig"; path = "Target Support Files/Pods-HomeFoods/Pods-HomeFoods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				0C8148482640CD5300678298 /* ResInfo.swift */,
+				0C0EB393264AF2B6000144F1 /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +236,10 @@
 			isa = PBXGroup;
 			children = (
 				0C3D66282644B23C002E740A /* RestaurantLoginViewController.swift */,
+				0C85A8F62649033D00240128 /* RestaurantHomeViewController.swift */,
+				0C0EB391264AEFEC000144F1 /* PostCell.swift */,
+				0C0EB395264AF60E000144F1 /* AddCell.swift */,
+				0C0EB396264AF60E000144F1 /* AddCell.xib */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -366,6 +381,7 @@
 				0C07BA8D263BE02F00989732 /* LaunchScreen.storyboard in Resources */,
 				0C07BAB8263BFCE900989732 /* GoogleService-Info.plist in Resources */,
 				0C07BA8A263BE02F00989732 /* Assets.xcassets in Resources */,
+				0C0EB398264AF60E000144F1 /* AddCell.xib in Resources */,
 				0C07BA88263BE02E00989732 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,14 +510,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0EB392264AEFEC000144F1 /* PostCell.swift in Sources */,
 				0C8148492640CD5300678298 /* ResInfo.swift in Sources */,
 				0C07BA85263BE02E00989732 /* ViewController.swift in Sources */,
 				0C81484B2640D9D500678298 /* RootViewController.swift in Sources */,
 				0C07BAB6263BEF0B00989732 /* RestaurantRegisterForm1ViewController.swift in Sources */,
 				0C8148472640C91100678298 /* Enums.swift in Sources */,
 				0C3D66272644B153002E740A /* MemberLoginViewController.swift in Sources */,
+				0C85A8F72649033D00240128 /* RestaurantHomeViewController.swift in Sources */,
 				0C07BAB4263BEEFC00989732 /* WelcomeViewController.swift in Sources */,
 				0C3D66292644B23C002E740A /* RestaurantLoginViewController.swift in Sources */,
+				0C0EB394264AF2B6000144F1 /* Item.swift in Sources */,
+				0C0EB397264AF60E000144F1 /* AddCell.swift in Sources */,
 				0C07BABE263CA23600989732 /* RestarantRegisterForm2ViewController.swift in Sources */,
 				0C07BABC263C91BA00989732 /* MemberRegisterViewController.swift in Sources */,
 				0C9F78102645F0940057B0B9 /* TestViewController.swift in Sources */,
