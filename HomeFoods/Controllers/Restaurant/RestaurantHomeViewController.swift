@@ -42,6 +42,7 @@ class RestaurantHomeViewController: UIViewController {
         headerImage.addSubview(tintView)
         // Do any additional setup after loading the view.
         loadResInfo()
+        loadItems()
     }
     
     func loadResInfo(){
@@ -79,17 +80,61 @@ class RestaurantHomeViewController: UIViewController {
         }
     }
 }
-    
+    func loadItems(){
+        let email = (Auth.auth().currentUser?.email!)!
+        activityIndicator.startAnimating()
+        db.collection(K.FStore.restaurant).document(email).collection(K.FStore.items)
+//            .order(by: K.FStore.date)
+            .addSnapshotListener{ (querySnapshot, error) in
+            self.items = []
+            if let e = error {
+                print("There was an issue retrieving data from Firestore. \(e)")
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        if let uid = data[K.FStore.uid] as? String,
+                            let imageUrlString = data[K.FStore.imageUrl] as? String,
+                            let itemName = data[K.FStore.itemName] as? String,
+                            let description = data[K.FStore.description] as? String,
+                            let price = data[K.FStore.price] as? String {
+                            let newItem = Item(name: itemName, uid: uid, price: price, description: description, imageURLString: imageUrlString)
+                            self.items.append(newItem)
+                            print("Data",data)
+                            print("ITEMS",self.items)
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                                self.activityIndicator.stopAnimating()
+                            }
+                        }
+                       
+                    
+//                        if let messageSender = data[K.FStore.] as? String,
+//                            let messageBody = data[K.FStore.bodyField] as? String {
+//                            let newMessage = Message(sender: messageSender, body: messageBody)
+//                            self.messages.append(newMessage)
+//                            DispatchQueue.main.async {
+//                                self.tableView.reloadData()
+//                            }
+//                        }
+                    }
+                }
+            }
+        }
+    }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "RHomeToRAdd" {
+        // remember to down cast it to the destination type (because default func doesn't know the new class type created)
+        // cast! forced down cast
+//        let destinationVC = segue.destination as! RestaurantAddItemController
+//            destinationVC.resInfo = self.resInfo
+//
+//        }
+//    }
 
 }
 
@@ -107,6 +152,7 @@ extension RestaurantHomeViewController: UITableViewDelegate, UITableViewDataSour
             let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! PostCell
             cell.nameLabel.text = items[indexPath.row].name
             cell.priceLabel.text = items[indexPath.row].price
+            cell.descriptionLabel.text = items[indexPath.row].description
             if let imageURL = items[indexPath.row].imageURL{
                 cell.postImage.af.setImage(withURL: imageURL)
             }
@@ -114,5 +160,10 @@ extension RestaurantHomeViewController: UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == items.count {
+           self.performSegue(withIdentifier: "RHomeToRAdd", sender: self)
+        }
+    }
     
 }

@@ -27,6 +27,7 @@ struct K {
         static let description = "description"
         static let kitchenDays = "kitchenDays"
         
+        static let items = "items"
         static let orders = "orders"
         static let itemName = "name"
         static let unit = "unit"

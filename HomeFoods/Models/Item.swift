@@ -11,7 +11,7 @@ struct Item{
     let name: String
     let uid: String
     let price: String
-    let quantity: String
+    let description: String
     let imageURLString: String
 
     var price$ : String {

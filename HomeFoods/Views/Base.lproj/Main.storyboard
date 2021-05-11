@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FXo-N7-CKy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mzs-bg-zJG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -172,14 +172,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="123"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="IYC-Wk-aig">
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IYC-Wk-aig">
                                                     <rect key="frame" x="30" y="16" width="354" height="101"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwk-Rm-tUN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="108" height="101"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="101" id="Uwc-2h-Ev6"/>
+                                                                <constraint firstAttribute="height" constant="101" id="lJE-SH-WDX"/>
+                                                            </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ygm-rS-jQp">
-                                                            <rect key="frame" x="122" y="0.0" width="232" height="86.5"/>
+                                                            <rect key="frame" x="111" y="0.0" width="243" height="86.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtL-rL-zJz">
                                                                     <rect key="frame" x="0.0" y="0.0" width="39.5" height="19.5"/>
@@ -215,11 +219,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="description" destination="hB0-dZ-rHp" id="jG0-YW-GE8"/>
-                                            <outlet property="descriptionLabel" destination="hB0-dZ-rHp" id="qzc-d7-bz1"/>
-                                            <outlet property="nameLabel" destination="DtL-rL-zJz" id="Q7g-Q1-wvj"/>
-                                            <outlet property="postImage" destination="fwk-Rm-tUN" id="0ML-vn-gsy"/>
-                                            <outlet property="priceLabel" destination="z4r-ix-x7J" id="ni2-o0-jgJ"/>
+                                            <outlet property="descriptionLabel" destination="hB0-dZ-rHp" id="sAL-Wk-YYj"/>
+                                            <outlet property="nameLabel" destination="DtL-rL-zJz" id="AWE-68-B30"/>
+                                            <outlet property="postImage" destination="fwk-Rm-tUN" id="hZO-bn-k0V"/>
+                                            <outlet property="priceLabel" destination="z4r-ix-x7J" id="QXH-bv-Xqc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -283,12 +286,118 @@
                         <outlet property="headerImage" destination="RPJ-Ct-jlH" id="491-8F-24J"/>
                         <outlet property="kitchenNameLabel" destination="2CS-Wp-SO9" id="rnI-iM-eyf"/>
                         <outlet property="phoneLabel" destination="tk5-0w-3jr" id="1wG-ls-olc"/>
-                        <outlet property="tableView" destination="HiH-jF-2XP" id="EyR-Wh-IeL"/>
+                        <outlet property="tableView" destination="HiH-jF-2XP" id="CTz-sJ-dUh"/>
+                        <segue destination="0vd-t6-nBv" kind="show" identifier="RHomeToRAdd" id="NeM-E8-qcX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61t-Cn-iDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="221.73913043478262" y="1678.7946428571429"/>
+        </scene>
+        <!--Item Information-->
+        <scene sceneID="dq9-mq-2vf">
+            <objects>
+                <viewController id="0vd-t6-nBv" customClass="RestaurantAddItemViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iVm-Jd-ico">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item infomation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPX-a9-Z2m">
+                                <rect key="frame" x="45" y="55" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item name : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HD-s2-bbJ">
+                                <rect key="frame" x="45" y="124" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgP-wI-VHw">
+                                <rect key="frame" x="45" y="400" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGp-WD-W5a">
+                                <rect key="frame" x="45" y="187" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rice Curry" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yw1-JC-l2G">
+                                <rect key="frame" x="147" y="117" width="218" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="bonesless fried chicken, half-boiled egg, red pickes over and curry sauce side." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nqx-As-eFf">
+                                <rect key="frame" x="45" y="229" width="320" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcc-ZI-MdA">
+                                <rect key="frame" x="147" y="393" width="218" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload Image:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dF7-YR-uaL">
+                                <rect key="frame" x="45" y="570" width="111" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="gai-cF-tkg">
+                                <rect key="frame" x="174" y="487" width="191" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="R3k-Ct-kej" appends="YES" id="euz-cW-XhS"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ln2-q4-5Vs">
+                                <rect key="frame" x="52" y="731" width="306" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="SUBMIT" backgroundImage="sellerLogin">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSubmit:" destination="MNh-Ra-iKu" eventType="touchUpInside" id="7gq-Ln-W7T"/>
+                                    <action selector="onSubmit:" destination="0vd-t6-nBv" eventType="touchUpInside" id="7p9-f5-n0f"/>
+                                    <action selector="registerPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="WlQ-PX-PpG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6UB-bA-3Ve"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Item Information" id="ULv-8u-vtt"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="nqx-As-eFf" id="Hgc-Yk-MIN"/>
+                        <outlet property="itemImageView" destination="gai-cF-tkg" id="Sgn-4Q-CW5"/>
+                        <outlet property="itemNameTextField" destination="yw1-JC-l2G" id="Yd8-WS-XEa"/>
+                        <outlet property="priceTextField" destination="Hcc-ZI-MdA" id="OCt-BG-QMH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Skz-Rz-70z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="R3k-Ct-kej">
+                    <connections>
+                        <action selector="onCameraButton:" destination="0vd-t6-nBv" id="m2J-iJ-yXr"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="221.73913043478262" y="2412.7232142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dbc-Vv-G5w">
