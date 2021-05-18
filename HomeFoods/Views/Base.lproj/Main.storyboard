@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mzs-bg-zJG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kEb-gu-Iq5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -295,12 +295,72 @@
             </objects>
             <point key="canvasLocation" x="221.73913043478262" y="1678.7946428571429"/>
         </scene>
+        <!--Member Home View Controller-->
+        <scene sceneID="qlu-XV-qnW">
+            <objects>
+                <viewController id="kEb-gu-Iq5" customClass="MemberHomeViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bCe-en-LKO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iga-ci-7IZ">
+                                <rect key="frame" x="20" y="114" width="344" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="q4f-wf-Q15" appends="YES" id="5Ji-hO-Eb7"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlZ-0h-Kpf">
+                                <rect key="frame" x="20" y="92" width="83" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aw6-fI-uTa">
+                                <rect key="frame" x="366" y="112" width="29" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="locationClicked:" destination="kEb-gu-Iq5" eventType="touchUpInside" id="mae-1R-d4P"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3ii-SM-vtx">
+                                <rect key="frame" x="0.0" y="151" width="414" height="757"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EDE-xC-gca"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GO6-Tz-MGC"/>
+                    <connections>
+                        <outlet property="locationLabel" destination="Iga-ci-7IZ" id="O8a-9P-Jn1"/>
+                        <outlet property="searchButton" destination="aw6-fI-uTa" id="XAq-wI-hvO"/>
+                        <segue destination="c7H-DA-eUf" kind="presentation" identifier="mHometoSearch" id="ZgK-Jo-YhJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bni-UO-9bJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="q4f-wf-Q15">
+                    <connections>
+                        <action selector="locationClicked:" destination="kEb-gu-Iq5" id="zae-rN-6bZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1595.6521739130435" y="1678.7946428571429"/>
+        </scene>
         <!--Home-->
         <scene sceneID="Ttd-CJ-Bpg">
             <objects>
-                <viewController id="c7H-DA-eUf" customClass="MemberHomeViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c7H-DA-eUf" customClass="LocationSearchViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TrC-sI-vif">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jd5-zo-mcj">
@@ -325,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myv-j0-Sne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1596" y="1679"/>
+            <point key="canvasLocation" x="2565" y="1679"/>
         </scene>
         <!--Member Search View Controller-->
         <scene sceneID="dtW-yO-S5d">
@@ -1096,7 +1156,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="rqo-tN-Q1g" id="oyc-Xu-K4g"/>
                         <outlet property="passwordTextField" destination="VUg-nb-WNg" id="1Dt-U4-Xrd"/>
-                        <segue destination="c7H-DA-eUf" kind="show" identifier="memberToHome" id="RFy-z5-cnv"/>
+                        <segue destination="kEb-gu-Iq5" kind="show" identifier="memberToHome" id="vIi-bo-Inm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XhG-Jg-ixQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1110,6 +1170,7 @@
         <image name="image_placeholder" width="375" height="375"/>
         <image name="locationNoBackgroundIcon" width="709" height="854"/>
         <image name="logo" width="1200" height="1200"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="old-telephone-ringing" width="512" height="512"/>
         <image name="sellerLogin" width="354" height="60"/>
         <image name="textField" width="354" height="60"/>

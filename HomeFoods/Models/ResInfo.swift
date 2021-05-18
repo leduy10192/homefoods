@@ -20,6 +20,8 @@ struct ResInfo {
     let description : String
     let kitchenDays : String
     let tags : String
+    let lon: String
+    let lat: String
     
     var address : String {
         let addr = "\(street) \(city), \(state) \(zip)"

@@ -229,7 +229,7 @@ extension RestaurantRegisterForm1ViewController {
         isGlutenSet = !isGlutenSet
         let button = sender
         let tagName = (button.titleLabel?.text)!
-        if(isVegSet){
+        if(isGlutenSet){
             button.layer.borderWidth = 1
             if(!tags.contains(tagName)){
                 tags.append(tagName)

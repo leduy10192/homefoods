@@ -1,6 +1,7 @@
 struct K {
     static let restaurantLogSeg = "restaurantToHome"
     static let memberLogSeg = "memberToHome"
+    static let mHomeToSearch = "mHometoSearch"
     static let cellNibName = "PostCell"
     static let cellIdentifier = "PostCell"
     static let MhomeToMCart = "MhomeToMCart"
