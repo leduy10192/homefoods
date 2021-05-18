@@ -10,6 +10,8 @@ import Firebase
 import TinyConstraints
 import AlamofireImage
 
+
+
 class RestaurantHomeViewController: UIViewController {
 
     @IBOutlet weak var headerImage: UIImageView!
@@ -167,3 +169,4 @@ extension RestaurantHomeViewController: UITableViewDelegate, UITableViewDataSour
     }
     
 }
+

@@ -42,7 +42,7 @@ class MemberLoginViewController: UIViewController {
                         if let doc = snapshot{
                             if doc.exists{
                                 print("buyer login success")
-//                                self.performSegue(withIdentifier: K.memberLogSeg, sender: self)
+                                self.performSegue(withIdentifier: K.memberLogSeg, sender: self)
                             }else{
                                 let alert = UIAlertController(
                                     title: "Invalid Login",
