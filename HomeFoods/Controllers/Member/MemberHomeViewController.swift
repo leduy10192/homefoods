@@ -124,6 +124,7 @@ class MemberHomeViewController: UIViewController {
             let destinationVC = segue.destination as! MemberResDetailViewController
             destinationVC.resInfo = self.resInfo
             destinationVC.address = addressDetail
+            destinationVC.myLocation = self.myLocation
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
@@ -138,7 +139,7 @@ extension MemberHomeViewController : CLLocationManagerDelegate {
             print("location:: \(location)")
             let latitude = location.coordinate.latitude
             let longitude = location.coordinate.longitude
-
+            
             // Create Location
             let location = CLLocation(latitude: latitude, longitude: longitude)
             self.myLocation = location
