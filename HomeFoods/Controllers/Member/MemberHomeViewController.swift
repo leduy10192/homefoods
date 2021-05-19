@@ -24,7 +24,8 @@ class MemberHomeViewController: UIViewController {
     let db = Firestore.firestore()
     
     var restaurants : [ResInfo] = []
-    
+    var resInfo : ResInfo?
+    var addressDetail: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -119,6 +120,10 @@ class MemberHomeViewController: UIViewController {
             let destinationVC = segue.destination as! LocationSearchViewController
             destinationVC.searchText = locationLabel.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             destinationVC.delegate = self
+        }else if segue.identifier == "mHometoDetails" {
+            let destinationVC = segue.destination as! MemberResDetailViewController
+            destinationVC.resInfo = self.resInfo
+            destinationVC.address = addressDetail
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
@@ -234,6 +239,7 @@ extension MemberHomeViewController: UITableViewDelegate, UITableViewDataSource {
             if let loc = self.myLocation {
                 let dist = restaurants[indexPath.row].makeAddrLabel(location: loc)
                 print("dist \(dist)")
+//                self.addressDetail = dist
                 cell.addressLabel.text = dist
             }else{
                 cell.addressLabel.text = "pending"
@@ -242,8 +248,12 @@ extension MemberHomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//           self.performSegue(withIdentifier: "RHomeToRAdd", sender: self)
-            print("nagivate to restaurant details")
+        self.resInfo = self.restaurants[indexPath.row]
+        if let loc = self.myLocation {
+            self.addressDetail = restaurants[indexPath.row].makeAddrLabel(location: loc)
+        }
+        self.performSegue(withIdentifier: "mHometoDetails", sender: self)
+//            print("nagivate to restaurant details")
     }
     
 }
