@@ -12,6 +12,7 @@ import Firebase
 import FirebaseStorage
 import FirebaseFirestore
 import Kingfisher
+import CoreLocation
 
 class RestarantRegisterForm2ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -130,6 +131,23 @@ class RestarantRegisterForm2ViewController: UIViewController,UIImagePickerContro
             print("resInfo is nil")
             return
         }
+        var lat = 0.0
+        var lon = 0.0
+        let address = resInfo?.address
+        if let addr = address {
+            let geocoder = CLGeocoder()
+            geocoder.geocodeAddressString(addr) {
+                placemarks, error in
+                let placemark = placemarks?.first
+                lat = (placemark?.location?.coordinate.latitude)! as Double
+                lon = (placemark?.location?.coordinate.longitude)! as Double
+                print("Lat: \(String(describing: lat)), Lon: \(String(describing: lon))")
+            }
+        }else{
+            print("lat and lon is nil")
+            return
+        }
+        
         
         let imageName = UUID().uuidString
         let imageReference = Storage.storage().reference().child(K.FStore.imagesFolder).child(imageName)
@@ -153,6 +171,7 @@ class RestarantRegisterForm2ViewController: UIViewController,UIImagePickerContro
                     if let e = error{
                         self.presentAlert(title: "Invalid Signup", message: "\(e.localizedDescription)")
                     }else{
+                        
                         self.db.collection(self.userType).document(email).setData([
                             K.FStore.email : email,
                             K.FStore.name : resName,
@@ -164,7 +183,9 @@ class RestarantRegisterForm2ViewController: UIViewController,UIImagePickerContro
                             K.FStore.imageUrl: urlString,
                             K.FStore.description: description,
                             K.FStore.kitchenDays: kitchenDays,
-                            K.FStore.tags: tags
+                            K.FStore.tags: tags,
+                            K.FStore.lat: lat,
+                            K.FStore.lon: lon
                         ])
                         
                         self.db.collection(self.userType).document(email).collection("items")

@@ -179,7 +179,7 @@ class RestaurantRegisterForm1ViewController: UIViewController {
             let state = stateField.text,
             let zip = zipField.text
             {
-            self.resInfo = ResInfo(name: name, email: email, phoneNumber: phoneNum, street: street, state: state, city: city, zip: zip, imageURLString: "", description: "", kitchenDays: "", tags: tagsString)
+            self.resInfo = ResInfo(name: name, email: email, phoneNumber: phoneNum, street: street, state: state, city: city, zip: zip, imageURLString: "", description: "", kitchenDays: "", tags: tagsString, lat: 0.0, lon: 0.0)
             }
         let destinationVC = segue.destination as! RestarantRegisterForm2ViewController
             destinationVC.resInfo = self.resInfo

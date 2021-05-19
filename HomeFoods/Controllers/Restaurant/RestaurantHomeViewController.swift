@@ -63,11 +63,12 @@ class RestaurantHomeViewController: UIViewController {
                         let resImageUrl = snapshotDocument[K.FStore.imageUrl] as? String,
                         let resDescription = snapshotDocument[K.FStore.description] as? String,
                         let resKitchenDays = snapshotDocument[K.FStore.kitchenDays] as? String,
-                        let resTags = snapshotDocument[K.FStore.tags] as? String
-                        
+                        let resTags = snapshotDocument[K.FStore.tags] as? String,
+                        let lat = snapshotDocument[K.FStore.lat] as? Double,
+                        let lon = snapshotDocument[K.FStore.lon] as? Double
                     {
                         self.resInfo = ResInfo(name: resName, email: email, phoneNumber: resPhone, street: resStreet, state: resState
-                                               , city: resCity, zip: resZip, imageURLString: resImageUrl, description: resDescription, kitchenDays: resKitchenDays, tags: resTags)
+                                               , city: resCity, zip: resZip, imageURLString: resImageUrl, description: resDescription, kitchenDays: resKitchenDays, tags: resTags, lat: lat, lon: lon)
                         DispatchQueue.main.async {
                             self.kitchenNameLabel.text = self.resInfo?.name
                             self.descriptionLabel.text = self.resInfo?.description

@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 protocol LocationSearchCellDelegate{
-    func updateSearchBar(address: String)
+    func updateSearchBar(address: String, locCors: CLLocation)
 }
 class LocationSearchViewController: UIViewController {
 
@@ -114,7 +114,7 @@ extension LocationSearchViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let result = searchResults[indexPath.row]
-        self.delegate?.updateSearchBar(address: result.subtitle)
+        
         
         let searchRequest = MKLocalSearch.Request(completion: result)
         
@@ -132,7 +132,8 @@ extension LocationSearchViewController: UITableViewDelegate {
             
             let lat = coordinate.latitude
             let lon = coordinate.longitude
-            
+            let location = CLLocation(latitude: lat, longitude: lon)
+            self.delegate?.updateSearchBar(address: result.subtitle, locCors: location)
             print(lat)
             print(lon)
         }

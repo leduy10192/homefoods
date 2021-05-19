@@ -4,6 +4,7 @@ struct K {
     static let mHomeToSearch = "mHometoSearch"
     static let cellNibName = "PostCell"
     static let cellIdentifier = "PostCell"
+    static let RestaurantCell = "RestaurantCell"
     static let MhomeToMCart = "MhomeToMCart"
     static let cartCell = "CartCell"
     static let CartToOrderConfirm = "CartToOrderConfirm"
@@ -45,6 +46,8 @@ struct K {
         static let cart = "cart"
         static let memberOrders = "memberOrders"
         static let lastUpdated = "lastUpdated"
+        static let lat = "lat"
+        static let lon = "lon"
     }
 }
 
