@@ -16,6 +16,7 @@ target 'HomeFoods' do
   pod 'IQKeyboardManagerSwift'
   pod 'Braintree'
   pod 'RSSelectionMenu'
+  pod 'Cosmos', '~> 23.0'
   target 'HomeFoodsTests' do
     inherit! :search_paths
     # Pods for testing

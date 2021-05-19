@@ -233,6 +233,7 @@ PODS:
     - Braintree/PayPalDataCollector
   - Braintree/PayPalDataCollector (5.0.1):
     - Braintree/Core
+  - Cosmos (23.0.0)
   - DynamicBlurView (4.1.0)
   - Firebase/Auth (7.7.0):
     - Firebase/CoreOnly
@@ -333,6 +334,7 @@ PODS:
 DEPENDENCIES:
   - AlamofireImage
   - Braintree
+  - Cosmos (~> 23.0)
   - Firebase/Auth
   - Firebase/Firestore
   - Firebase/Storage
@@ -349,6 +351,7 @@ SPEC REPOS:
     - AlamofireImage
     - BoringSSL-GRPC
     - Braintree
+    - Cosmos
     - DynamicBlurView
     - Firebase
     - FirebaseAuth
@@ -376,6 +379,7 @@ SPEC CHECKSUMS:
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Braintree: 5dfbf76615163970ad7158cb68239b7aa76ddd22
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   Firebase: cd2ab85eec8170dc260186159f21072ecb679ad5
   FirebaseAuth: 76aa97ecd51e20ecd21321d08474d25f5d2b7b9f
@@ -397,6 +401,6 @@ SPEC CHECKSUMS:
   RSSelectionMenu: f803d0936e074b2fdac2c41bf1d0a5b0c7fdc3e1
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: 355679a4e4372483f35fae010017455c659f2cb6
+PODFILE CHECKSUM: 47c1ab9f5911a67136fc3a0f4590995527b3da3d
 
 COCOAPODS: 1.10.0.beta.2
