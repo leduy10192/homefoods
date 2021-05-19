@@ -92,25 +92,62 @@ open class RSSelectionMenu<T: Equatable>: UIViewController, UIPopoverPresentatio
     
     // MARK: - Init
     
-    convenience public init(dataSource: DataSource<T>, cellConfiguration configuration: @escaping UITableViewCellConfiguration<T>) {
-        self.init(selectionStyle: .single, dataSource: dataSource, cellConfiguration: configuration)
+    convenience public init(
+        dataSource: DataSource<T>,
+        tableViewStyle: UITableView.Style = .plain,
+        cellConfiguration configuration: @escaping UITableViewCellConfiguration<T>) {
+        
+        self.init(
+            selectionStyle: .single,
+            dataSource: dataSource,
+            tableViewStyle: tableViewStyle,
+            cellConfiguration: configuration
+        )
     }
     
-    convenience public init(selectionStyle: SelectionStyle, dataSource: DataSource<T>, cellConfiguration configuration: @escaping UITableViewCellConfiguration<T>) {
-        self.init(selectionStyle: selectionStyle, dataSource: dataSource, cellType: .basic, cellConfiguration: configuration)
+    convenience public init(
+        selectionStyle: SelectionStyle,
+        dataSource: DataSource<T>,
+        tableViewStyle: UITableView.Style = .plain,
+        cellConfiguration configuration: @escaping UITableViewCellConfiguration<T>) {
+        
+        self.init(
+            selectionStyle: selectionStyle,
+            dataSource: dataSource,
+            tableViewStyle: tableViewStyle,
+            cellType: .basic,
+            cellConfiguration: configuration
+        )
     }
     
-    convenience public init(selectionStyle: SelectionStyle, dataSource: DataSource<T>, cellType: CellType, cellConfiguration configuration: @escaping UITableViewCellConfiguration<T>) {
+    convenience public init(
+        selectionStyle: SelectionStyle,
+        dataSource: DataSource<T>,
+        tableViewStyle: UITableView.Style = .plain,
+        cellType: CellType,
+        cellConfiguration configuration: @escaping UITableViewCellConfiguration<T>) {
+        
         self.init()
         
         // data source
-        let selectionDataSource = RSSelectionMenuDataSource<T>(dataSource: dataSource, forCellType: cellType, cellConfiguration: configuration)
+        let selectionDataSource = RSSelectionMenuDataSource<T>(
+            dataSource: dataSource,
+            forCellType: cellType,
+            cellConfiguration: configuration
+        )
         
         // delegate
         let selectionDelegate = RSSelectionMenuDelegate<T>(selectedItems: [])
      
         // initilize tableview
-        self.tableView = RSSelectionTableView<T>(selectionStyle: selectionStyle, cellType: cellType, dataSource: selectionDataSource, delegate: selectionDelegate, from: self)
+        self.tableView = RSSelectionTableView<T>(
+            selectionStyle: selectionStyle,
+            tableViewStyle: tableViewStyle,
+            cellType: cellType,
+            dataSource: selectionDataSource,
+            delegate: selectionDelegate,
+            from: self
+        )
     }
     
     // MARK: - Life Cycle
@@ -265,7 +302,11 @@ open class RSSelectionMenu<T: Equatable>: UIViewController, UIPopoverPresentatio
     }
     
     public func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
-        return !showRightBarButton()
+	let shouldDismiss = !showRightBarButton()
+	if shouldDismiss {
+	    self.menuWillDismiss()
+	}
+        return shouldDismiss
     }
     
     // MARK: - UIGestureRecognizerDelegate
@@ -393,14 +434,15 @@ extension RSSelectionMenu {
         if case .present = with {
             tobePresentController = UINavigationController(rootViewController: self)
         }
-        else if case let .popover(sourceView, size) = with {
+        else if case let .popover(sourceView, size, arrowDirection, hideNavBar) = with {
             tobePresentController = UINavigationController(rootViewController: self)
+			(tobePresentController as! UINavigationController).setNavigationBarHidden(hideNavBar, animated: false)
             tobePresentController.modalPresentationStyle = .popover
             if size != nil { tobePresentController.preferredContentSize = size! }
             
             let popover = tobePresentController.popoverPresentationController!
             popover.delegate = self
-            popover.permittedArrowDirections = .any
+            popover.permittedArrowDirections = arrowDirection
             popover.sourceView = sourceView
             popover.sourceRect = sourceView.bounds
         }
