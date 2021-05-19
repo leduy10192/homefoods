@@ -17,6 +17,7 @@ target 'HomeFoods' do
   pod 'Braintree'
   pod 'RSSelectionMenu'
   pod 'Cosmos', '~> 23.0'
+  pod 'ValueStepper'
   target 'HomeFoodsTests' do
     inherit! :search_paths
     # Pods for testing

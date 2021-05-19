@@ -1357,6 +1357,9 @@
                                 <state key="normal" title="Order">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cyB-l9-uzn" kind="show" identifier="toOrder" id="pS2-Sb-Ryl"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aI7-L3-vUZ">
                                 <rect key="frame" x="1" y="662" width="412" height="144"/>
@@ -1380,12 +1383,48 @@
             </objects>
             <point key="canvasLocation" x="1595.6521739130435" y="2412.7232142857142"/>
         </scene>
+        <!--Order View Controller-->
+        <scene sceneID="bEX-RL-PH4">
+            <objects>
+                <viewController id="cyB-l9-uzn" customClass="OrderViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zIU-hb-alX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="orU-ad-vLO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" rowHeight="178" id="4LT-Jf-gkc" customClass="OrderCell" customModule="HomeFoods" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="178"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4LT-Jf-gkc" id="HGP-x4-1Ni">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Th9-YB-Q47"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="orU-ad-vLO" firstAttribute="trailing" secondItem="Th9-YB-Q47" secondAttribute="trailing" id="Sga-A6-g35"/>
+                            <constraint firstItem="orU-ad-vLO" firstAttribute="top" secondItem="Th9-YB-Q47" secondAttribute="top" id="YRV-jC-Ixx"/>
+                            <constraint firstItem="Th9-YB-Q47" firstAttribute="bottom" secondItem="orU-ad-vLO" secondAttribute="bottom" id="dVn-0E-hZT"/>
+                            <constraint firstItem="orU-ad-vLO" firstAttribute="leading" secondItem="Th9-YB-Q47" secondAttribute="leading" id="vTf-oi-aIx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yXF-cU-Z2W"/>
+                    <connections>
+                        <outlet property="tableView" destination="orU-ad-vLO" id="AAI-6b-oM3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ke9-dc-bup" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595.6521739130435" y="3111.8303571428569"/>
+        </scene>
     </scenes>
-    <designables>
-        <designable name="Hj1-jr-jCp">
-            <size key="intrinsicContentSize" width="145" height="25"/>
-        </designable>
-    </designables>
     <resources>
         <image name="call" width="512" height="512"/>
         <image name="icon-mail" width="21" height="16"/>

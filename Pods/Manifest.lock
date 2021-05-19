@@ -331,6 +331,7 @@ PODS:
   - PromisesObjC (1.2.12)
   - RSSelectionMenu (7.1.3)
   - TinyConstraints (4.0.1)
+  - ValueStepper (1.6)
 
 DEPENDENCIES:
   - AlamofireImage
@@ -344,6 +345,7 @@ DEPENDENCIES:
   - PopupDialog
   - RSSelectionMenu
   - TinyConstraints
+  - ValueStepper
 
 SPEC REPOS:
   trunk:
@@ -373,6 +375,7 @@ SPEC REPOS:
     - PromisesObjC
     - RSSelectionMenu
     - TinyConstraints
+    - ValueStepper
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -401,7 +404,8 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   RSSelectionMenu: 873d62ebbaef138519f6cf3f073412c2b5d94c2c
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+  ValueStepper: 8b120c72c8d1391cd874a427485e2e57fda1a0b9
 
-PODFILE CHECKSUM: 47c1ab9f5911a67136fc3a0f4590995527b3da3d
+PODFILE CHECKSUM: 4a1c1a4be2d0c32676d3b2d34af99bca880265aa
 
 COCOAPODS: 1.10.0.beta.2

@@ -68,7 +68,7 @@ class MemberHomeViewController: UIViewController {
                 if let snapshotDocuments = querySnapshot?.documents {
                     for doc in snapshotDocuments {
                         let data = doc.data()
-                        if let resEmail = data[K.FStore.imageUrl] as? String,
+                        if let resEmail = data[K.FStore.email] as? String,
                            let resName = data[K.FStore.name] as? String,
                            let resPhone = data[K.FStore.phoneNumber] as? String,
                            let resStreet = data[K.FStore.street] as? String,
