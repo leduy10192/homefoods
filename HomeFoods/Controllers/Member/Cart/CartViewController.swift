@@ -27,7 +27,10 @@ class CartViewController: UIViewController {
 //        print("First item quanitity: \(orderItems[0].quantity)\n")
         tableView.register(UINib(nibName: "CartCell", bundle: nil), forCellReuseIdentifier: "CartCell")
         // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
         updateResInfo()
+        tableView.reloadData()
     }
     
     func customizeTextView(){
@@ -81,3 +84,21 @@ class CartViewController: UIViewController {
 
 }
 
+extension CartViewController : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return orderItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as! CartCell
+        cell.itemNameLabel.text = orderItems[indexPath.row].name
+        let price = orderItems[indexPath.row].price
+        let quantity = orderItems[indexPath.row].quantity
+        let subTotal = Double(price)! * Double(quantity)
+        cell.priceValLabel.text = price
+        cell.QuanValLabel.text =  String(quantity)
+        cell.subTotValLabel.text = String(subTotal)
+        
+        return cell
+    }
+}

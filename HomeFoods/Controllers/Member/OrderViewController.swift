@@ -114,7 +114,7 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource{
         cell.delegate = self
         cell.itemNameLabel.text = orderItems[indexPath.row].name
         cell.itemDescriptionLabel.text = orderItems[indexPath.row].description
-        cell.itemPriceLabel.text = orderItems[indexPath.row].price
+        cell.itemPriceLabel.text = orderItems[indexPath.row].price$
         if let imageURL = orderItems[indexPath.row].imageURL{
             cell.itemImageView
                 .af.setImage(withURL: imageURL)

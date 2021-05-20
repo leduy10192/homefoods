@@ -154,7 +154,7 @@ extension RestaurantHomeViewController: UITableViewDelegate, UITableViewDataSour
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! PostCell
             cell.nameLabel.text = items[indexPath.row].name
-            cell.priceLabel.text = items[indexPath.row].price
+            cell.priceLabel.text = items[indexPath.row].price$
             cell.descriptionLabel.text = items[indexPath.row].description
             if let imageURL = items[indexPath.row].imageURL{
                 cell.postImage.af.setImage(withURL: imageURL)

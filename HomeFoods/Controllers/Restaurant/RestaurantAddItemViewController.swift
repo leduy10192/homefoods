@@ -135,7 +135,7 @@ class RestaurantAddItemViewController: UIViewController, UIImagePickerController
                     K.FStore.imageUrl: urlString,
                     K.FStore.itemName : itemName,
                     K.FStore.description: description,
-                    K.FStore.price : price$
+                    K.FStore.price : price
                     ] as [String : Any]
                 
                 dataReference.setData(data) { (err) in
