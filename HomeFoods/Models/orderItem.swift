@@ -14,7 +14,9 @@ struct orderItem{
     let description: String
     let imageURLString: String
     var quantity: Int
-    let date: Double
+    let orderDate: Double
+    var pickupDate: Double
+    var addInfo: String
     
     var price$ : String {
         return "$\(price)"
@@ -32,8 +34,8 @@ struct orderItem{
         return String(format: "$%.2f", total)
     }
     
-    var dateString : String {
-        let d = Date(timeIntervalSince1970: date)
+    func converDoubleToDateStr( date: Double) -> String{
+        let d = Date(timeIntervalSince1970: orderDate)
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "MMMM dd, yyyy 'at' h:mm a"
@@ -42,4 +44,12 @@ struct orderItem{
         let dateStr = formatter.string(from: d)
         return dateStr
     }
+    
+    var orderDateString : String {
+        return converDoubleToDateStr(date: orderDate)
+    }
+    var pickupDateString : String {
+        return converDoubleToDateStr(date: pickupDate)
+    }
+    
 }

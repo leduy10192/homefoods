@@ -13,12 +13,14 @@ import Firebase
 class OrderViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var checkoutButton: UIButton!
     
     let activityIndicator = UIActivityIndicatorView(style: .medium)
     let db = Firestore.firestore()
     var orderItems : [orderItem] = []
     
     var resInfo : ResInfo?
+    var totalQuantity : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +34,10 @@ class OrderViewController: UIViewController {
 //        tableView.rowHeight = UITableView.automaticDimension
         // Do any additional setup after loading the view.
 //        print("resInfo \(resInfo)")
+        if(totalQuantity == 0){
+            checkoutButton.isEnabled = false
+            checkoutButton.isHidden = true
+        }
         loadItems()
     }
     
@@ -54,7 +60,7 @@ class OrderViewController: UIViewController {
                             let itemName = data[K.FStore.itemName] as? String,
                             let description = data[K.FStore.description] as? String,
                             let price = data[K.FStore.price] as? String {
-                            let newItem = orderItem(name: itemName, uid: uid, price: price, description: description, imageURLString: imageUrlString, quantity: 0, date: 0.0)
+                            let newItem = orderItem(name: itemName, uid: uid, price: price, description: description, imageURLString: imageUrlString, quantity: 0, orderDate: 0.0, pickupDate: 0, addInfo: "")
                             self.orderItems.append(newItem)
                             print("Data",data)
                             print("ITEMS", self.orderItems)
@@ -91,7 +97,8 @@ class OrderViewController: UIViewController {
 //            self.tableView.reloadData()
             let destVC = segue.destination as! CartViewController
             destVC.resInfo = self.resInfo
-            destVC.orderItems = self.orderItems
+            let filteredItemsbasedOnQuantity = self.orderItems.filter{$0.quantity > 0}
+            destVC.orderItems = filteredItemsbasedOnQuantity
         }
     }
 
@@ -122,5 +129,13 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource{
 extension OrderViewController: OrderCellDelegate {
     func updateQuantity(index: Int, value: Int) {
         orderItems[index].quantity = value
+        totalQuantity += value
+        if(totalQuantity != 0){
+            checkoutButton.isEnabled = true
+            checkoutButton.isHidden = false
+        }else{
+            checkoutButton.isEnabled = false
+            checkoutButton.isHidden = true
+        }
     }
 }

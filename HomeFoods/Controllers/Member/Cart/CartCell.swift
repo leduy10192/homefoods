@@ -9,6 +9,11 @@ import UIKit
 
 class CartCell: UITableViewCell {
 
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var priceValLabel: UILabel!
+    @IBOutlet weak var QuanValLabel: UILabel!
+    @IBOutlet weak var subTotValLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -16,7 +21,7 @@ class CartCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
