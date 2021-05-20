@@ -37,6 +37,10 @@
 		0CA494422655BA0A0064408C /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA494412655BA0A0064408C /* OrderViewController.swift */; };
 		0CA494452655BA240064408C /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA494432655BA240064408C /* OrderCell.swift */; };
 		0CA494462655BA240064408C /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA494442655BA240064408C /* OrderCell.xib */; };
+		0CA644E12656E6AD00734D73 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA644E02656E6AD00734D73 /* CartViewController.swift */; };
+		0CA644E42656E89500734D73 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA644E22656E89500734D73 /* CartCell.swift */; };
+		0CA644E52656E89500734D73 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA644E32656E89500734D73 /* CartCell.xib */; };
+		0CA644E72656F22800734D73 /* orderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA644E62656F22800734D73 /* orderItem.swift */; };
 		0CB9356326531E5400BF6D0E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9356226531E5400BF6D0E /* LocationSearchTable.swift */; };
 		0CB935652653787200BF6D0E /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB935642653787200BF6D0E /* LocationSearchViewController.swift */; };
 		0CB93567265389F800BF6D0E /* MemberHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB93566265389F800BF6D0E /* MemberHomeViewController.swift */; };
@@ -104,6 +108,10 @@
 		0CA494412655BA0A0064408C /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		0CA494432655BA240064408C /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		0CA494442655BA240064408C /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		0CA644E02656E6AD00734D73 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		0CA644E22656E89500734D73 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		0CA644E32656E89500734D73 /* CartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
+		0CA644E62656F22800734D73 /* orderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderItem.swift; sourceTree = "<group>"; };
 		0CB9356226531E5400BF6D0E /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		0CB935642653787200BF6D0E /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		0CB93566265389F800BF6D0E /* MemberHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberHomeViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +253,7 @@
 			children = (
 				0C8148482640CD5300678298 /* ResInfo.swift */,
 				0C0EB393264AF2B6000144F1 /* Item.swift */,
+				0CA644E62656F22800734D73 /* orderItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,6 +261,7 @@
 		0C3D66242644B0E6002E740A /* Member */ = {
 			isa = PBXGroup;
 			children = (
+				0CA644DF2656E68D00734D73 /* Cart */,
 				0C3D66262644B153002E740A /* MemberLoginViewController.swift */,
 				0CFA7DF026530B2C00433E07 /* MemberSearchViewController.swift */,
 				0CB9356226531E5400BF6D0E /* LocationSearchTable.swift */,
@@ -291,6 +301,16 @@
 				0C9F780F2645F0940057B0B9 /* TestViewController.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		0CA644DF2656E68D00734D73 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				0CA644E02656E6AD00734D73 /* CartViewController.swift */,
+				0CA644E22656E89500734D73 /* CartCell.swift */,
+				0CA644E32656E89500734D73 /* CartCell.xib */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 		0CB9356E2655196900BF6D0E /* Utility */ = {
@@ -429,6 +449,7 @@
 				0C07BA8A263BE02F00989732 /* Assets.xcassets in Resources */,
 				0C0EB398264AF60E000144F1 /* AddCell.xib in Resources */,
 				0C07BA88263BE02E00989732 /* Main.storyboard in Resources */,
+				0CA644E52656E89500734D73 /* CartCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +584,7 @@
 				0CB9356D2654933E00BF6D0E /* MemberResDetailViewController.swift in Sources */,
 				0C8148492640CD5300678298 /* ResInfo.swift in Sources */,
 				0CA494452655BA240064408C /* OrderCell.swift in Sources */,
+				0CA644E42656E89500734D73 /* CartCell.swift in Sources */,
 				0C07BA85263BE02E00989732 /* ViewController.swift in Sources */,
 				0C81484B2640D9D500678298 /* RootViewController.swift in Sources */,
 				0C07BAB6263BEF0B00989732 /* RestaurantRegisterForm1ViewController.swift in Sources */,
@@ -576,8 +598,10 @@
 				0C07BAB4263BEEFC00989732 /* WelcomeViewController.swift in Sources */,
 				0C3D66292644B23C002E740A /* RestaurantLoginViewController.swift in Sources */,
 				0C0EB394264AF2B6000144F1 /* Item.swift in Sources */,
+				0CA644E72656F22800734D73 /* orderItem.swift in Sources */,
 				0C0EB397264AF60E000144F1 /* AddCell.swift in Sources */,
 				0C07BABE263CA23600989732 /* RestarantRegisterForm2ViewController.swift in Sources */,
+				0CA644E12656E6AD00734D73 /* CartViewController.swift in Sources */,
 				0C07BABC263C91BA00989732 /* MemberRegisterViewController.swift in Sources */,
 				0C9F78102645F0940057B0B9 /* TestViewController.swift in Sources */,
 				0C8148452640C5BA00678298 /* MultipleSelectionHandler.swift in Sources */,

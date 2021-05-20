@@ -101,6 +101,9 @@
                                                         <color key="value" red="0.25882352939999997" green="0.21960784310000001" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="stepperValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="dF0-5q-OMg"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -133,6 +136,11 @@
             <point key="canvasLocation" x="-110.14492753623189" y="168.41517857142856"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="q9h-b8-cer">
+            <size key="intrinsicContentSize" width="141" height="29"/>
+        </designable>
+    </designables>
     <resources>
         <image name="image_placeholder" width="375" height="375"/>
         <systemColor name="opaqueSeparatorColor">

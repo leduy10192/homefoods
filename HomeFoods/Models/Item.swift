@@ -13,7 +13,7 @@ struct Item{
     let price: String
     let description: String
     let imageURLString: String
-
+    
     var price$ : String {
         return "$\(price)"
     }

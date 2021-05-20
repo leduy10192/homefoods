@@ -1417,7 +1417,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ktq-bk-cm8" kind="show" id="ujz-6k-Kr0"/>
+                                    <action selector="checkoutPressed:" destination="cyB-l9-uzn" eventType="touchUpInside" id="VI0-fJ-nDO"/>
+                                    <segue destination="ktq-bk-cm8" kind="show" identifier="rDetailsToOrder" id="ujz-6k-Kr0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1445,7 +1446,7 @@
         <!--Cart-->
         <scene sceneID="f3v-hd-Ie8">
             <objects>
-                <viewController id="ktq-bk-cm8" sceneMemberID="viewController">
+                <viewController id="ktq-bk-cm8" customClass="CartViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HIN-Nt-Udu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1560,6 +1561,9 @@
                                         <state key="normal" title="Clear">
                                             <color key="titleColor" red="0.25882352939999997" green="0.21960784310000001" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clearButtonPressed:" destination="ktq-bk-cm8" eventType="touchUpInside" id="2da-QQ-wdY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1590,12 +1594,27 @@
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cart" id="5oT-Ew-z56"/>
+                    <connections>
+                        <outlet property="cartLabel" destination="Ab5-4E-Sqb" id="t7o-zv-6MY"/>
+                        <outlet property="datePicker" destination="0ow-vR-VKP" id="AJD-DG-8ej"/>
+                        <outlet property="resAddrLabel" destination="jHb-nE-ubh" id="6x5-Az-9uR"/>
+                        <outlet property="resNameLabel" destination="wg9-CM-2Ef" id="wPC-7N-aar"/>
+                        <outlet property="resPhoneLabel" destination="SYH-HL-b5e" id="9x3-B2-ydC"/>
+                        <outlet property="tableView" destination="tiy-x4-mfu" id="G8p-U2-DhC"/>
+                        <outlet property="textView" destination="n1d-cj-Ad1" id="HlU-Sc-Ylb"/>
+                        <outlet property="totalLabel" destination="TJ0-55-gQX" id="qM2-mZ-vUY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhb-tg-pB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2624.6376811594205" y="3111.8303571428569"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Hj1-jr-jCp">
+            <size key="intrinsicContentSize" width="145" height="25"/>
+        </designable>
+    </designables>
     <resources>
         <image name="call" width="512" height="512"/>
         <image name="icon-mail" width="21" height="16"/>
