@@ -51,6 +51,10 @@
 		0CA644FD26576DE100734D73 /* RestaurantOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA644FC26576DE100734D73 /* RestaurantOrderItem.swift */; };
 		0CA64500265781FC00734D73 /* RestaurantSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA644FE265781FC00734D73 /* RestaurantSummaryCell.swift */; };
 		0CA64501265781FC00734D73 /* RestaurantSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA644FF265781FC00734D73 /* RestaurantSummaryCell.xib */; };
+		0CA6450426578E3800734D73 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6450326578E3800734D73 /* ChatViewController.swift */; };
+		0CA6450726578E6C00734D73 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6450526578E6C00734D73 /* MessageCell.swift */; };
+		0CA6450826578E6C00734D73 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA6450626578E6C00734D73 /* MessageCell.xib */; };
+		0CA6450A26578EE300734D73 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6450926578EE300734D73 /* Message.swift */; };
 		0CB9356326531E5400BF6D0E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9356226531E5400BF6D0E /* LocationSearchTable.swift */; };
 		0CB935652653787200BF6D0E /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB935642653787200BF6D0E /* LocationSearchViewController.swift */; };
 		0CB93567265389F800BF6D0E /* MemberHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB93566265389F800BF6D0E /* MemberHomeViewController.swift */; };
@@ -132,6 +136,10 @@
 		0CA644FC26576DE100734D73 /* RestaurantOrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantOrderItem.swift; sourceTree = "<group>"; };
 		0CA644FE265781FC00734D73 /* RestaurantSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSummaryCell.swift; sourceTree = "<group>"; };
 		0CA644FF265781FC00734D73 /* RestaurantSummaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantSummaryCell.xib; sourceTree = "<group>"; };
+		0CA6450326578E3800734D73 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		0CA6450526578E6C00734D73 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		0CA6450626578E6C00734D73 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		0CA6450926578EE300734D73 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		0CB9356226531E5400BF6D0E /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		0CB935642653787200BF6D0E /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		0CB93566265389F800BF6D0E /* MemberHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberHomeViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +285,7 @@
 				0CA644E826572A7900734D73 /* MemberInfo.swift */,
 				0CA644FA26576CEE00734D73 /* MemberOrderItem.swift */,
 				0CA644FC26576DE100734D73 /* RestaurantOrderItem.swift */,
+				0CA6450926578EE300734D73 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,6 +293,7 @@
 		0C3D66242644B0E6002E740A /* Member */ = {
 			isa = PBXGroup;
 			children = (
+				0CA6450226578DFC00734D73 /* Chat */,
 				0CA644EE26575EFF00734D73 /* Summary */,
 				0CA644DF2656E68D00734D73 /* Cart */,
 				0C3D66262644B153002E740A /* MemberLoginViewController.swift */,
@@ -373,6 +383,16 @@
 				0CA644FF265781FC00734D73 /* RestaurantSummaryCell.xib */,
 			);
 			path = Summary;
+			sourceTree = "<group>";
+		};
+		0CA6450226578DFC00734D73 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				0CA6450326578E3800734D73 /* ChatViewController.swift */,
+				0CA6450526578E6C00734D73 /* MessageCell.swift */,
+				0CA6450626578E6C00734D73 /* MessageCell.xib */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		0CB9356E2655196900BF6D0E /* Utility */ = {
@@ -508,6 +528,7 @@
 				0CA64501265781FC00734D73 /* RestaurantSummaryCell.xib in Resources */,
 				0CA644F92657634E00734D73 /* MemberSummaryCell.xib in Resources */,
 				0C07BA8D263BE02F00989732 /* LaunchScreen.storyboard in Resources */,
+				0CA6450826578E6C00734D73 /* MessageCell.xib in Resources */,
 				0C07BAB8263BFCE900989732 /* GoogleService-Info.plist in Resources */,
 				0CB9356B2654693E00BF6D0E /* RestaurantCell.xib in Resources */,
 				0C07BA8A263BE02F00989732 /* Assets.xcassets in Resources */,
@@ -651,6 +672,7 @@
 				0CA494452655BA240064408C /* OrderCell.swift in Sources */,
 				0CA644E42656E89500734D73 /* CartCell.swift in Sources */,
 				0C07BA85263BE02E00989732 /* ViewController.swift in Sources */,
+				0CA6450A26578EE300734D73 /* Message.swift in Sources */,
 				0C81484B2640D9D500678298 /* RootViewController.swift in Sources */,
 				0C07BAB6263BEF0B00989732 /* RestaurantRegisterForm1ViewController.swift in Sources */,
 				0C8148472640C91100678298 /* Enums.swift in Sources */,
@@ -678,9 +700,11 @@
 				0CA644FD26576DE100734D73 /* RestaurantOrderItem.swift in Sources */,
 				0CA644FB26576CEE00734D73 /* MemberOrderItem.swift in Sources */,
 				0C07BA81263BE02E00989732 /* AppDelegate.swift in Sources */,
+				0CA6450426578E3800734D73 /* ChatViewController.swift in Sources */,
 				0C07BA83263BE02E00989732 /* SceneDelegate.swift in Sources */,
 				0C07BABA263C063400989732 /* Constant.swift in Sources */,
 				0C0EB39C264B1688000144F1 /* PostCell.swift in Sources */,
+				0CA6450726578E6C00734D73 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
