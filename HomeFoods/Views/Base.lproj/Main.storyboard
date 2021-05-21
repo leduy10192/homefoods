@@ -80,7 +80,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="seller@2.com" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="jud-BS-MLT" userLabel="Email Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="jud-BS-MLT" userLabel="Email Text Field">
                                 <rect key="frame" x="43" y="248" width="329" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -90,7 +90,7 @@
                                     <action selector="emailTextField:" destination="a9h-qP-QDo" eventType="editingDidEnd" id="wE5-S5-bpd"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="0VV-tF-G65" userLabel="Email Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="0VV-tF-G65" userLabel="Email Text Field">
                                 <rect key="frame" x="43" y="341" width="329" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -542,13 +542,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rice Curry" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yw1-JC-l2G">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yw1-JC-l2G">
                                 <rect key="frame" x="147" y="117" width="218" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="bonesless fried chicken, half-boiled egg, red pickes over and curry sauce side." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nqx-As-eFf">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nqx-As-eFf">
                                 <rect key="frame" x="45" y="229" width="320" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -689,49 +689,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="seller@2.com" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="bWC-9C-IW8" userLabel="Email Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="bWC-9C-IW8" userLabel="Email Text Field">
                                 <rect key="frame" x="43" y="122" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Password" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="VJX-fO-IM4" userLabel="Password Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="VJX-fO-IM4" userLabel="Password Text Field">
                                 <rect key="frame" x="43" y="175" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="(111)222-333" placeholder="Phone" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="ay8-Kn-HiC" userLabel="Phone Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="ay8-Kn-HiC" userLabel="Phone Text Field">
                                 <rect key="frame" x="43" y="222" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="San Jose" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="ysV-vb-hgg" userLabel="City Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="ysV-vb-hgg" userLabel="City Field">
                                 <rect key="frame" x="42" y="448" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CA" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="3g3-ih-M7C" userLabel="State Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="3g3-ih-M7C" userLabel="State Field">
                                 <rect key="frame" x="42" y="502" width="331" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="95111" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="XNo-Sb-JKk" userLabel="Zip Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="XNo-Sb-JKk" userLabel="Zip Field">
                                 <rect key="frame" x="42" y="554" width="331" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123 Steven Ct" placeholder="Street" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="25v-1u-8Lc" userLabel="Street Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="25v-1u-8Lc" userLabel="Street Field">
                                 <rect key="frame" x="42" y="394" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -854,7 +854,7 @@
                                     <action selector="kitoPressed:" destination="QpC-Aa-8la" eventType="touchUpInside" id="5Ex-ok-PoQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hana's Indian Home Kitchen" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="TJ5-8R-SfX" userLabel="Name Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="TJ5-8R-SfX" userLabel="Name Text Field">
                                 <rect key="frame" x="43" y="309" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -941,7 +941,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Authentic Indian Cuisine. Pick up On Tuesdays &amp; Friday from 1:00 - 4:00 PM PDT." translatesAutoresizingMaskIntoConstraints="NO" id="xuE-rU-wwB">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xuE-rU-wwB">
                                 <rect key="frame" x="30" y="137" width="364" height="190"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -961,7 +961,7 @@
                                     <action selector="selectDaysButtonClicked:" destination="MNh-Ra-iKu" eventType="touchUpInside" id="neO-Fq-vty"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vH7-1A-pI8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vH7-1A-pI8">
                                 <rect key="frame" x="32" y="407" width="339" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1027,49 +1027,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="buyer@2.com" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="IS6-u5-yWC" userLabel="Email Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="IS6-u5-yWC" userLabel="Email Text Field">
                                 <rect key="frame" x="43" y="122" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Password" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="8KZ-B9-cdj" userLabel="Password Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="8KZ-B9-cdj" userLabel="Password Text Field">
                                 <rect key="frame" x="43" y="175" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="(111)222-333" placeholder="Phone" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="31D-Zz-EUn" userLabel="Phone Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="31D-Zz-EUn" userLabel="Phone Text Field">
                                 <rect key="frame" x="43" y="222" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="San Jose" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="nzO-B0-Bpm" userLabel="City Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="nzO-B0-Bpm" userLabel="City Field">
                                 <rect key="frame" x="42" y="448" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CA" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="fTZ-9S-y0j" userLabel="State Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="fTZ-9S-y0j" userLabel="State Field">
                                 <rect key="frame" x="42" y="502" width="331" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="95111" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="hf6-R1-umv" userLabel="Zip Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="hf6-R1-umv" userLabel="Zip Field">
                                 <rect key="frame" x="42" y="554" width="331" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123 Sweet Ct" placeholder="Street" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-1T-Dx4" userLabel="Street Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-1T-Dx4" userLabel="Street Field">
                                 <rect key="frame" x="42" y="394" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1095,7 +1095,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Duy Le" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="7ea-WH-Kic" userLabel="Name Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="7ea-WH-Kic" userLabel="Name Text Field">
                                 <rect key="frame" x="43" y="309" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1160,14 +1160,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="buyer@2.com" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-tN-Q1g" userLabel="Email Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-tN-Q1g" userLabel="Email Text Field">
                                 <rect key="frame" x="43" y="248" width="329" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="VUg-nb-WNg" userLabel="Email Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="VUg-nb-WNg" userLabel="Email Text Field">
                                 <rect key="frame" x="43" y="341" width="329" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86793352720000005" green="0.88064481569999997" blue="0.92459044420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
