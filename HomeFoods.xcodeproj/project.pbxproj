@@ -42,6 +42,7 @@
 		0CA644E52656E89500734D73 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA644E32656E89500734D73 /* CartCell.xib */; };
 		0CA644E72656F22800734D73 /* orderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA644E62656F22800734D73 /* orderItem.swift */; };
 		0CA644E926572A7900734D73 /* MemberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA644E826572A7900734D73 /* MemberInfo.swift */; };
+		0CA644EB2657448000734D73 /* OrderConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA644EA2657448000734D73 /* OrderConfirmViewController.swift */; };
 		0CB9356326531E5400BF6D0E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9356226531E5400BF6D0E /* LocationSearchTable.swift */; };
 		0CB935652653787200BF6D0E /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB935642653787200BF6D0E /* LocationSearchViewController.swift */; };
 		0CB93567265389F800BF6D0E /* MemberHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB93566265389F800BF6D0E /* MemberHomeViewController.swift */; };
@@ -114,6 +115,7 @@
 		0CA644E32656E89500734D73 /* CartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
 		0CA644E62656F22800734D73 /* orderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderItem.swift; sourceTree = "<group>"; };
 		0CA644E826572A7900734D73 /* MemberInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberInfo.swift; sourceTree = "<group>"; };
+		0CA644EA2657448000734D73 /* OrderConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmViewController.swift; sourceTree = "<group>"; };
 		0CB9356226531E5400BF6D0E /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		0CB935642653787200BF6D0E /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		0CB93566265389F800BF6D0E /* MemberHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberHomeViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				0CA494412655BA0A0064408C /* OrderViewController.swift */,
 				0CA494432655BA240064408C /* OrderCell.swift */,
 				0CA494442655BA240064408C /* OrderCell.xib */,
+				0CA644EA2657448000734D73 /* OrderConfirmViewController.swift */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				0CFA7DF126530B2C00433E07 /* MemberSearchViewController.swift in Sources */,
 				0CB93567265389F800BF6D0E /* MemberHomeViewController.swift in Sources */,
 				0C85A8F72649033D00240128 /* RestaurantHomeViewController.swift in Sources */,
+				0CA644EB2657448000734D73 /* OrderConfirmViewController.swift in Sources */,
 				0C0EB39A264B03A2000144F1 /* RestaurantAddItemViewController.swift in Sources */,
 				0C07BAB4263BEEFC00989732 /* WelcomeViewController.swift in Sources */,
 				0C3D66292644B23C002E740A /* RestaurantLoginViewController.swift in Sources */,

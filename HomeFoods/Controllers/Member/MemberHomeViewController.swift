@@ -17,6 +17,10 @@ class MemberHomeViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    lazy var logoutButton = UIBarButtonItem(image: UIImage(named: "logout"), style: .plain, target: self, action: #selector(logout))
+    
+    lazy var orderBarButton = UIBarButtonItem(image: UIImage(named: "summary"), style: .plain, target: self, action: #selector(viewOrder))
+    
     let locationManager = CLLocationManager()
     lazy var geocoder = CLGeocoder()
     var myLocation : CLLocation?

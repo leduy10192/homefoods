@@ -9,7 +9,7 @@ import Foundation
 
 struct orderItem{
     let name: String
-    let uid: String
+    var uid: String
     let price: String
     let description: String
     let imageURLString: String

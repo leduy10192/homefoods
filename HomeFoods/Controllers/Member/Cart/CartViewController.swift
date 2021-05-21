@@ -26,6 +26,7 @@ class CartViewController: UIViewController {
     let activityIndicator = UIActivityIndicatorView(style: .medium)
     var braintreeClient: BTAPIClient!
     
+    var uid: String = ""
     var resInfo : ResInfo?
     var memberInfo : MemberInfo?
     var orderItems : [orderItem] = []
@@ -102,10 +103,11 @@ class CartViewController: UIViewController {
                 
                 
                 let email = (Auth.auth().currentUser?.email!)!
-                for item in self.orderItems{
+                for var item in self.orderItems{
                     //Update seller records, use seller email instead
                     let dataRef = self.db.collection(K.FStore.restaurant).document(self.resInfo!.email).collection(K.FStore.orders).document()
                     let documentUid = dataRef.documentID
+                    item.uid = documentUid
                     let data = [
                         K.FStore.uid: documentUid,
                         K.FStore.memberName: self.memberInfo?.memberName ?? "",
@@ -150,7 +152,7 @@ class CartViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
-//                    self.performSegue(withIdentifier: K.CartToOrderConfirm, sender: self)
+                    self.performSegue(withIdentifier: K.CartToOrderConfirm, sender: self)
                 }
                 
             } else if let error = error {
@@ -187,16 +189,18 @@ class CartViewController: UIViewController {
             item.pickupDate = sender.date.timeIntervalSince1970
         }
     }
-    
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == K.CartToOrderConfirm {
+            let destinationVC = segue.destination as! OrderConfirmViewController
+            destinationVC.orderItems = self.orderItems
+            destinationVC.resInfo = self.resInfo
+//            destinationVC.uid = self.uid
+        }
     }
-    */
 
 }
 
