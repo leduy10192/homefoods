@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import AlamofireImage
+import TinyConstraints
+import Firebase
+import Braintree
 
 class CartViewController: UIViewController {
 
@@ -18,8 +22,12 @@ class CartViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     @IBOutlet weak var tableView: UITableView!
+    let db = Firestore.firestore()
+    let activityIndicator = UIActivityIndicatorView(style: .medium)
+    var braintreeClient: BTAPIClient!
     
     var resInfo : ResInfo?
+    var memberInfo : MemberInfo?
     var orderItems : [orderItem] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +37,18 @@ class CartViewController: UIViewController {
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
+        //Eliminate extra separators below UITableView
+        self.tableView.tableFooterView = UIView()
+        
+        view.addSubview(activityIndicator)
+        activityIndicator.centerInSuperview()
+        
+        braintreeClient = BTAPIClient(authorization: "sandbox_7bzw92sx_bkmn4qbwpph22zxt")!
+        
+        loadMemInfo()
         updateResInfo()
         tableView.reloadData()
+        updateTotalPriceUI()
     }
     
     func customizeTextView(){
@@ -38,10 +56,108 @@ class CartViewController: UIViewController {
         self.textView.layer.borderWidth = 0.5
         self.textView.layer.cornerRadius = 15
     }
+    func updateTotalPriceUI(){
+        var subTotal = 0.0
+        for item in orderItems {
+            if let itemPrice = Double(item.price){
+                subTotal += itemPrice
+            }
+        }
+        totalLabel.text = String (format: "$%.2f", subTotal)
+    }
     
+    func loadMemInfo() {
+        let email = (Auth.auth().currentUser?.email!)!
+        db.collection(K.FStore.member).document(email).addSnapshotListener { (querySnapshot, error) in
+            if let e = error {
+                print("There was an issue retrieving data from Firestore. \(e)")
+            }else{
+                if let snapshotDocument = querySnapshot{
+                    if  let memName = snapshotDocument[K.FStore.name] as? String,
+                        let memEmail = snapshotDocument[K.FStore.email] as? String,
+                        let memPhone = snapshotDocument[K.FStore.phoneNumber] as? String{
+                        self.memberInfo = MemberInfo(memberName: memName, memberEmail: memEmail, memberPhoneNum: memPhone)
+                    }
+                }
+            }
+        }
+    }
     @IBAction func ProceedPaymentPressed(_ sender: UIButton) {
-        for var item in orderItems {
-            item.addInfo = textView.text
+//        for var item in orderItems {
+//            item.addInfo = textView.text
+//        }
+        activityIndicator.startAnimating()
+        let payPalDriver = BTPayPalDriver(apiClient: braintreeClient)
+
+//        payPalDriver.BTViewControllerPresentingDelegate = self
+//        payPalDriver.appSwitchDelegate = self // Optional
+        
+        // Specify the transaction amount here. "2.32" is used in this example.
+        let request = BTPayPalCheckoutRequest(amount: "2.32")
+        request.currencyCode = "USD" // Optional; see BTPayPalRequest.h for more options
+
+        payPalDriver.tokenizePayPalAccount (with: request) { (tokenizedPayPalAccount, error) in
+            if let tokenizedPayPalAccount = tokenizedPayPalAccount {
+                print("Got a nonce: \(tokenizedPayPalAccount.nonce)")
+                
+                
+                let email = (Auth.auth().currentUser?.email!)!
+                for item in self.orderItems{
+                    //Update seller records, use seller email instead
+                    let dataRef = self.db.collection(K.FStore.restaurant).document(self.resInfo!.email).collection(K.FStore.orders).document()
+                    let documentUid = dataRef.documentID
+                    let data = [
+                        K.FStore.uid: documentUid,
+                        K.FStore.memberName: self.memberInfo?.memberName ?? "",
+                        K.FStore.memberPhoneNum: self.memberInfo?.memberPhoneNum ?? "",
+                        K.FStore.memberEmail: self.memberInfo?.memberEmail ?? "",
+                        "orderDate": FieldValue.serverTimestamp(),
+                        "pickupDate": item.pickupDate,
+                        K.FStore.name: item.name,
+                        K.FStore.price: item.price,
+                        K.FStore.quantity: item.quantity,
+                        K.FStore.additionalInfo: self.textView.text ?? ""
+                    ] as [String : Any]
+                    
+                    dataRef.setData(data) { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        }
+                    }
+                    //put item into orders collection
+                    let dataRef2 = self.db.collection(K.FStore.member).document(email).collection(K.FStore.memberOrders).document()
+                    let mDocumentUid = dataRef2.documentID
+                    let data2 = [
+                        K.FStore.uid: mDocumentUid,
+                        K.FStore.resName : self.resInfo?.name ?? "",
+                        K.FStore.resEmail : self.resInfo?.email ?? "",
+                        K.FStore.resAddress: self.resInfo?.address ?? "",
+                        K.FStore.resPhone : self.resInfo?.phoneNumber ?? "",
+                        "orderDate": FieldValue.serverTimestamp(),
+                        "pickupDate": item.pickupDate,
+                        K.FStore.name: item.name,
+                        K.FStore.price: item.price,
+                        K.FStore.quantity: item.quantity,
+                        K.FStore.additionalInfo: self.textView.text ?? ""
+                        ] as [String : Any]
+                    
+                    dataRef2.setData(data2){ (error) in
+                        if let err = error {
+                            print("Error updating document: \(err)")
+                        }
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+//                    self.performSegue(withIdentifier: K.CartToOrderConfirm, sender: self)
+                }
+                
+            } else if let error = error {
+                print(error)
+            } else {
+                // Buyer canceled payment approval
+            }
         }
     }
     
@@ -102,3 +218,27 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource{
         return cell
     }
 }
+
+extension CartViewController: BTViewControllerPresentingDelegate {
+    func paymentDriver(_ driver: Any, requestsPresentationOf viewController: UIViewController) {
+        
+    }
+    
+    func paymentDriver(_ driver: Any, requestsDismissalOf viewController: UIViewController) {
+        
+    }
+}
+ 
+//extension CartViewController: BTAppSwitchDelegate{
+//    func appSwitcherWillPerformAppSwitch(_ appSwitcher: Any) {
+//
+//    }
+//
+//    func appSwitcher(_ appSwitcher: Any, didPerformSwitchTo target: BTAppSwitchTarget) {
+//
+//    }
+//
+//    func appSwitcherWillProcessPaymentInfo(_ appSwitcher: Any) {
+//
+//    }
+//}

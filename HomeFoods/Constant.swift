@@ -28,6 +28,7 @@ struct K {
         static let tags = "tags"
         static let description = "description"
         static let kitchenDays = "kitchenDays"
+        static let additionalInfo = "additionalInfo"
         
         static let items = "items"
         static let orders = "orders"
@@ -43,6 +44,9 @@ struct K {
         static let imageUrl = "imageUrl"
         static let date = "date"
         static let resName = "resName"
+        static let resEmail = "resEmail"
+        static let resAddress = "resAddress"
+        static let resPhone = "resPhone"
         static let cart = "cart"
         static let memberOrders = "memberOrders"
         static let lastUpdated = "lastUpdated"
