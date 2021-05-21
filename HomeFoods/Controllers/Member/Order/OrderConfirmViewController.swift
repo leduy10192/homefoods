@@ -51,8 +51,11 @@ class OrderConfirmViewController: UIViewController {
     }
     
     @objc func popToRoot() {
-            performSegue(withIdentifier: K.OrderConfirmToHome, sender: self)
+//            performSegue(withIdentifier: K.OrderConfirmToHome, sender: self)
+        navigationController?.popToViewController(ofClass: MemberHomeViewController.self)
        }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -63,4 +66,12 @@ class OrderConfirmViewController: UIViewController {
     }
     */
 
+}
+
+extension UINavigationController {
+  func popToViewController(ofClass: AnyClass, animated: Bool = true) {
+    if let vc = viewControllers.last(where: { $0.isKind(of: ofClass) }) {
+      popToViewController(vc, animated: animated)
+    }
+  }
 }

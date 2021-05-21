@@ -140,6 +140,7 @@ class CartViewController: UIViewController {
                         K.FStore.name: item.name,
                         K.FStore.price: item.price,
                         K.FStore.quantity: item.quantity,
+                        K.FStore.imageUrl: item.imageURLString,
                         K.FStore.additionalInfo: self.textView.text ?? ""
                         ] as [String : Any]
                     

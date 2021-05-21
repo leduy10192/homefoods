@@ -9,6 +9,8 @@ struct K {
     static let cartCell = "CartCell"
     static let CartToOrderConfirm = "CartToOrderConfirm"
     static let OrderConfirmToHome = "OrderConfirmToHome"
+    static let resHomeToSum = "resHomeToSum"
+    static let memHomeToSum = "memHomeToSum"
     
     struct FStore {
 

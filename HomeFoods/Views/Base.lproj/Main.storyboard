@@ -133,6 +133,22 @@
             </objects>
             <point key="canvasLocation" x="222" y="958"/>
         </scene>
+        <!--Restaurant Summary View Controller-->
+        <scene sceneID="nPL-t1-XCs">
+            <objects>
+                <viewController id="rMf-Ms-Okq" customClass="RestaurantSummaryViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cdb-t1-BUC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="09h-t8-RhD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tyt-1z-0Tx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojM-9r-fcs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807" y="1674"/>
+        </scene>
         <!--Restaurant Home View Controller-->
         <scene sceneID="Zhu-XY-1Uh">
             <objects>
@@ -289,6 +305,7 @@
                         <outlet property="phoneLabel" destination="tk5-0w-3jr" id="1wG-ls-olc"/>
                         <outlet property="tableView" destination="HiH-jF-2XP" id="CTz-sJ-dUh"/>
                         <segue destination="0vd-t6-nBv" kind="show" identifier="RHomeToRAdd" id="NeM-E8-qcX"/>
+                        <segue destination="rMf-Ms-Okq" kind="show" identifier="resHomeToSum" id="tLw-sq-g5L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61t-Cn-iDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -300,7 +317,7 @@
             <objects>
                 <viewController id="kEb-gu-Iq5" customClass="MemberHomeViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bCe-en-LKO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iga-ci-7IZ">
@@ -356,6 +373,7 @@
                         <outlet property="tableView" destination="3ii-SM-vtx" id="H7c-sJ-kG5"/>
                         <segue destination="c7H-DA-eUf" kind="presentation" identifier="mHometoSearch" id="ZgK-Jo-YhJ"/>
                         <segue destination="8GS-1R-6B6" kind="show" identifier="mHometoDetails" id="HOs-8U-wKs"/>
+                        <segue destination="cai-Vw-sN2" kind="show" identifier="memHomeToSum" id="FyW-no-itW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bni-UO-9bJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -397,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myv-j0-Sne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2565" y="1679"/>
+            <point key="canvasLocation" x="2949" y="1306"/>
         </scene>
         <!--Member Search View Controller-->
         <scene sceneID="dtW-yO-S5d">
@@ -1180,7 +1198,7 @@
             <objects>
                 <viewController id="8GS-1R-6B6" userLabel="Restaurant Home View Controller" customClass="MemberResDetailViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uim-oM-gkK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="3i1-Uq-fmp" userLabel="Header Image">
@@ -1383,16 +1401,42 @@
             </objects>
             <point key="canvasLocation" x="1595.6521739130435" y="2412.7232142857142"/>
         </scene>
+        <!--OrderSummary-->
+        <scene sceneID="31J-Uz-8zc">
+            <objects>
+                <viewController id="cai-Vw-sN2" customClass="MemberSummaryViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v3H-Kc-ROH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B5l-5H-FeV">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wdE-Qg-kbl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="OrderSummary" id="dC7-EF-n5r"/>
+                    <connections>
+                        <outlet property="tableView" destination="B5l-5H-FeV" id="vHO-un-ZMk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hga-eu-kIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2921.739130434783" y="2049.7767857142858"/>
+        </scene>
         <!--Order View Controller-->
         <scene sceneID="bEX-RL-PH4">
             <objects>
                 <viewController id="cyB-l9-uzn" customClass="OrderViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zIU-hb-alX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="orU-ad-vLO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" rowHeight="178" id="4LT-Jf-gkc" customClass="OrderCell" customModule="HomeFoods" customModuleProvider="target">
@@ -1406,7 +1450,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87e-yg-hpo">
-                                <rect key="frame" x="0.0" y="758" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.21960784310000001" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8cW-BA-eHw"/>
@@ -1449,7 +1493,7 @@
             <objects>
                 <viewController id="ktq-bk-cm8" customClass="CartViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HIN-Nt-Udu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f34-mU-3Vg">
@@ -1622,7 +1666,7 @@
             <objects>
                 <viewController id="4n2-iH-2VR" customClass="OrderConfirmViewController" customModule="HomeFoods" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tox-84-0Ae">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5Fc-Dz-MCW">
@@ -1714,7 +1758,6 @@
                         <outlet property="sellerAddrLabel" destination="lLg-ao-2zg" id="hKp-TB-jk2"/>
                         <outlet property="sellerImageView" destination="E49-mb-fmZ" id="J1Y-e1-sTh"/>
                         <outlet property="sellerNameLabel" destination="1rw-a6-atJ" id="Dtk-5C-5I3"/>
-                        <segue destination="kEb-gu-Iq5" kind="show" identifier="OrderConfirmToHome" id="V8v-fS-neO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sco-jg-p0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1727,10 +1770,6 @@
             <size key="intrinsicContentSize" width="145" height="25"/>
         </designable>
     </designables>
-    <inferredMetricsTieBreakers>
-        <segue reference="HOs-8U-wKs"/>
-        <segue reference="V8v-fS-neO"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="call" width="512" height="512"/>
         <image name="icon-mail" width="21" height="16"/>
