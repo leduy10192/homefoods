@@ -21,6 +21,10 @@ class RestaurantHomeViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    lazy var logoutButton = UIBarButtonItem(image: UIImage(named: "logout"), style: .plain, target: self, action: #selector(logout))
+    
+    lazy var summaryButton = UIBarButtonItem(image: UIImage(named: "summary"), style: .plain, target: self, action: #selector(summary))
+    
     let activityIndicator = UIActivityIndicatorView(style: .medium)
     let db = Firestore.firestore()
     var resInfo : ResInfo? = nil
@@ -37,6 +41,8 @@ class RestaurantHomeViewController: UIViewController {
         tableView.register(UINib(nibName: "AddCell", bundle: nil), forCellReuseIdentifier: "AddCell")
         tableView.estimatedRowHeight = 90.0
         tableView.rowHeight = UITableView.automaticDimension
+        
+        navigationItem.setRightBarButtonItems([logoutButton, summaryButton], animated: false)
         
         let tintView = UIView()
         tintView.backgroundColor = UIColor(white: 0, alpha: 0.5) //change to your liking
@@ -125,7 +131,20 @@ class RestaurantHomeViewController: UIViewController {
             }
         }
     }
-
+    
+    @objc func logout() {
+       do {
+         try Auth.auth().signOut()
+           //navigate user to welcome screen
+           navigationController?.popToRootViewController(animated: true)
+       } catch let signOutError as NSError {
+         print ("Error signing out: %@", signOutError)
+       }
+   }
+   
+   @objc func summary() {
+        self.performSegue(withIdentifier: "resHomeToSum", sender: self)
+   }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

@@ -45,6 +45,8 @@ struct K {
         static let uid = "uid"
         static let imageUrl = "imageUrl"
         static let date = "date"
+        static let orderDate = "orderDate"
+        static let pickupDate = "pickupDate"
         static let resName = "resName"
         static let resEmail = "resEmail"
         static let resAddress = "resAddress"

@@ -49,6 +49,8 @@
 		0CA644F92657634E00734D73 /* MemberSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA644F72657634E00734D73 /* MemberSummaryCell.xib */; };
 		0CA644FB26576CEE00734D73 /* MemberOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA644FA26576CEE00734D73 /* MemberOrderItem.swift */; };
 		0CA644FD26576DE100734D73 /* RestaurantOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA644FC26576DE100734D73 /* RestaurantOrderItem.swift */; };
+		0CA64500265781FC00734D73 /* RestaurantSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA644FE265781FC00734D73 /* RestaurantSummaryCell.swift */; };
+		0CA64501265781FC00734D73 /* RestaurantSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA644FF265781FC00734D73 /* RestaurantSummaryCell.xib */; };
 		0CB9356326531E5400BF6D0E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9356226531E5400BF6D0E /* LocationSearchTable.swift */; };
 		0CB935652653787200BF6D0E /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB935642653787200BF6D0E /* LocationSearchViewController.swift */; };
 		0CB93567265389F800BF6D0E /* MemberHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB93566265389F800BF6D0E /* MemberHomeViewController.swift */; };
@@ -128,6 +130,8 @@
 		0CA644F72657634E00734D73 /* MemberSummaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberSummaryCell.xib; sourceTree = "<group>"; };
 		0CA644FA26576CEE00734D73 /* MemberOrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOrderItem.swift; sourceTree = "<group>"; };
 		0CA644FC26576DE100734D73 /* RestaurantOrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantOrderItem.swift; sourceTree = "<group>"; };
+		0CA644FE265781FC00734D73 /* RestaurantSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSummaryCell.swift; sourceTree = "<group>"; };
+		0CA644FF265781FC00734D73 /* RestaurantSummaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantSummaryCell.xib; sourceTree = "<group>"; };
 		0CB9356226531E5400BF6D0E /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		0CB935642653787200BF6D0E /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		0CB93566265389F800BF6D0E /* MemberHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberHomeViewController.swift; sourceTree = "<group>"; };
@@ -365,6 +369,8 @@
 			isa = PBXGroup;
 			children = (
 				0CA644F2265760A400734D73 /* RestaurantSummaryViewController.swift */,
+				0CA644FE265781FC00734D73 /* RestaurantSummaryCell.swift */,
+				0CA644FF265781FC00734D73 /* RestaurantSummaryCell.xib */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA494462655BA240064408C /* OrderCell.xib in Resources */,
+				0CA64501265781FC00734D73 /* RestaurantSummaryCell.xib in Resources */,
 				0CA644F92657634E00734D73 /* MemberSummaryCell.xib in Resources */,
 				0C07BA8D263BE02F00989732 /* LaunchScreen.storyboard in Resources */,
 				0C07BAB8263BFCE900989732 /* GoogleService-Info.plist in Resources */,
@@ -647,6 +654,7 @@
 				0C81484B2640D9D500678298 /* RootViewController.swift in Sources */,
 				0C07BAB6263BEF0B00989732 /* RestaurantRegisterForm1ViewController.swift in Sources */,
 				0C8148472640C91100678298 /* Enums.swift in Sources */,
+				0CA64500265781FC00734D73 /* RestaurantSummaryCell.swift in Sources */,
 				0CB9356326531E5400BF6D0E /* LocationSearchTable.swift in Sources */,
 				0C3D66272644B153002E740A /* MemberLoginViewController.swift in Sources */,
 				0CFA7DF126530B2C00433E07 /* MemberSearchViewController.swift in Sources */,
