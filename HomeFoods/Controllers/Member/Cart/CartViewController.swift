@@ -30,6 +30,9 @@ class CartViewController: UIViewController {
     var resInfo : ResInfo?
     var memberInfo : MemberInfo?
     var orderItems : [orderItem] = []
+    var pickupDate : Double = 0.0
+    var isDatePicked : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         customizeTextView()
@@ -61,7 +64,7 @@ class CartViewController: UIViewController {
         var subTotal = 0.0
         for item in orderItems {
             if let itemPrice = Double(item.price){
-                subTotal += itemPrice
+                subTotal += itemPrice * Double(item.quantity)
             }
         }
         totalLabel.text = String (format: "$%.2f", subTotal)
@@ -87,6 +90,16 @@ class CartViewController: UIViewController {
 //        for var item in orderItems {
 //            item.addInfo = textView.text
 //        }
+//        print("datePickerValue \(self.datePicker.date.timeIntervalSince1970)\n")
+        if(isDatePicked == false){
+            let alert = UIAlertController(title: ("Please select date and time to pick up!"), message: nil, preferredStyle: .alert)
+            let cancelAction: UIAlertAction = UIAlertAction(title: "Close", style: .cancel) { _ in }
+                 alert.addAction(cancelAction)
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        
         activityIndicator.startAnimating()
         let payPalDriver = BTPayPalDriver(apiClient: braintreeClient)
 
@@ -113,8 +126,8 @@ class CartViewController: UIViewController {
                         K.FStore.memberName: self.memberInfo?.memberName ?? "",
                         K.FStore.memberPhoneNum: self.memberInfo?.memberPhoneNum ?? "",
                         K.FStore.memberEmail: self.memberInfo?.memberEmail ?? "",
-                        "orderDate": FieldValue.serverTimestamp(),
-                        "pickupDate": item.pickupDate,
+                        "orderDate": Date().timeIntervalSince1970,
+                        "pickupDate": self.pickupDate,
                         K.FStore.name: item.name,
                         K.FStore.price: item.price,
                         K.FStore.quantity: item.quantity,
@@ -135,8 +148,8 @@ class CartViewController: UIViewController {
                         K.FStore.resEmail : self.resInfo?.email ?? "",
                         K.FStore.resAddress: self.resInfo?.address ?? "",
                         K.FStore.resPhone : self.resInfo?.phoneNumber ?? "",
-                        "orderDate": FieldValue.serverTimestamp(),
-                        "pickupDate": item.pickupDate,
+                        "orderDate": Date().timeIntervalSince1970,
+                        "pickupDate": self.pickupDate,
                         K.FStore.name: item.name,
                         K.FStore.price: item.price,
                         K.FStore.quantity: item.quantity,
@@ -186,9 +199,12 @@ class CartViewController: UIViewController {
     }
     
     @IBAction func datePickedValueChanged(_ sender: UIDatePicker) {
-        for var item in orderItems{
-            item.pickupDate = sender.date.timeIntervalSince1970
-        }
+//        for var item in orderItems{
+//            item.pickupDate = sender.date.timeIntervalSince1970
+//        }
+        self.isDatePicked = true
+//        print("pickupDate \(sender.date.timeIntervalSince1970)\n")
+        self.pickupDate = sender.date.timeIntervalSince1970
     }
 
     // MARK: - Navigation
